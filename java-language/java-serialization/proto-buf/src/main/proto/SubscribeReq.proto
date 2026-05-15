@@ -1,6 +1,6 @@
 syntax = "proto3";
 package netty;
-option java_package = "manfred.proto.buf.v2";
+option java_package = "manfred.exercises.serialization.protobuf.v2";
 option java_outer_classname = "SubscribeReqProto";
 
 message SubscribeReq {

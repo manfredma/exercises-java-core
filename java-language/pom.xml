@@ -22,7 +22,6 @@
         <module>java-gc</module>
         <module>java-serialization</module>
         <module>java-io</module>
-        <module>java8</module>
         <module>jdk-concurrent</module>
     </modules>
 

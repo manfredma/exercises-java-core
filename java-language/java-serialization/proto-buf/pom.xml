@@ -15,49 +15,40 @@
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
-            <version>3.9.1</version>
+            <version>4.34.1</version>
         </dependency>
-
     </dependencies>
 
     <build>
         <plugins>
-            <!-- Protobuf 编译插件 - 自动生成 Java 代码 -->
+            <!-- 覆盖父 POM 的 2.3.2，确保 generated-sources 加入编译路径 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <!-- Protobuf 编译插件，从 .proto 生成 Java 代码 -->
             <plugin>
                 <groupId>org.xolstice.maven.plugins</groupId>
                 <artifactId>protobuf-maven-plugin</artifactId>
                 <version>0.6.1</version>
                 <configuration>
-                    <!-- 使用本地安装的 protoc，避免从仓库下载 exe artifact -->
                     <protocExecutable>/opt/homebrew/bin/protoc</protocExecutable>
                 </configuration>
                 <executions>
                     <execution>
                         <goals>
-                            <!-- compile: 编译 .proto 文件生成 Java 代码 -->
                             <goal>compile</goal>
-                            <!-- test-compile: 编译测试目录下的 .proto 文件 -->
                             <goal>test-compile</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
         </plugins>
-
-        <!-- 确保生成的源码被正确处理 -->
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.1</version>
-                    <configuration>
-                        <source>1.8</source>
-                        <target>1.8</target>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
     </build>
 
 </project>

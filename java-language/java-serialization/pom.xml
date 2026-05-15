@@ -17,6 +17,7 @@
         <module>message-pack</module>
         <module>json</module>
         <module>html</module>
+        <module>proto-buf</module>
     </modules>
 
 </project>
