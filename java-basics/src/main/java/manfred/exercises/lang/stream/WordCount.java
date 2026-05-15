@@ -4,6 +4,14 @@ import java.util.*;
 import java.util.function.*;
 import java.util.stream.*;
 
+/**
+ * 演示自定义 Spliterator 实现并行安全的单词计数。
+ *
+ * countWordsIteratively 用循环统计单词数；
+ * countWords 通过 WordCounterSpliterator 按单词边界拆分流，
+ * 配合不可变的 WordCounter 累加器支持并行 reduce，
+ * 说明正确实现 Spliterator.trySplit 对并行流结果正确性的重要性。
+ */
 public class WordCount {
 
     public static final String SENTENCE =

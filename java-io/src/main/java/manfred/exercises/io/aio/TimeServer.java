@@ -1,7 +1,10 @@
 package manfred.exercises.io.aio;
 
 /**
- * @author manfred on 2019/9/10.
+ * AIO 时间服务器的启动入口类。
+ *
+ * 解析命令行端口参数，创建 {@link AsyncTimeServerHandler} 并以命名线程启动，
+ * 演示 AIO（异步非阻塞 I/O）服务端的整体启动方式，与 BIO/NIO 启动方式对比学习。
  */
 public class TimeServer {
 

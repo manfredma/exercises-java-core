@@ -1,9 +1,13 @@
 package manfred.exercises.serialization.protobuf.v2;
 
 import com.google.protobuf.InvalidProtocolBufferException;
-
 /**
- * @author manfred on 2019/9/14.
+ * 演示 Protocol Buffers v2 版本中含 repeated 字段的订阅请求消息编解码流程。
+ *
+ * 练习使用 {@code SubscribeReqProto.SubscribeReq} Builder 构建包含多地址
+ * ({@code repeated string address}) 的复合消息，通过自定义的 {@code encode}/{@code decode}
+ * 方法封装 Protobuf 的二进制序列化接口，并通过 {@code equals} 断言验证
+ * 编解码前后对象的一致性，体会 Protobuf 对复杂结构消息的高效处理能力。
  */
 public class TestSubscribeReqProto {
     private static byte[] encode(SubscribeReqProto.SubscribeReq req) {

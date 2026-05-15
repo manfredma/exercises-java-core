@@ -10,6 +10,13 @@ import org.junit.Test;
 import java.io.IOException;
 import java.util.Iterator;
 
+/**
+ * 演示使用 Jackson 结合 JSON Schema 对 JSON 数据进行结构校验。
+ *
+ * 练习通过 {@code com.github.fge.jsonschema} 库与 Jackson 的 {@code JsonNode}
+ * 配合使用，定义 JSON Schema 并对输入数据执行验证，获取并遍历校验报告
+ * ({@code ProcessingReport})，掌握 JSON Schema 校验失败信息的解析方式。
+ */
 public class JacksonSchemaMain {
     @Test
     public void testJsonSchema2() {

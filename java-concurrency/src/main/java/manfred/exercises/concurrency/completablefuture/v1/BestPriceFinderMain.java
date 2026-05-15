@@ -3,6 +3,12 @@ package manfred.exercises.concurrency.completablefuture.v1;
 import java.util.List;
 import java.util.function.Supplier;
 
+/**
+ * v1 版 BestPriceFinder 的启动入口，对比多种价格查询方案的执行耗时。
+ *
+ * 依次运行顺序查询、并行流、CompletableFuture 组合、含汇率换算的 USD 价格查询
+ * 以及多个变体实现，通过耗时输出直观展示各并发方案的性能差异。
+ */
 public class BestPriceFinderMain {
 
     private static BestPriceFinder bestPriceFinder = new BestPriceFinder();

@@ -3,6 +3,13 @@ package manfred.exercises.lang.lambda.functional;
 import java.util.function.Supplier;
 import java.util.function.Predicate;
 
+/**
+ * 演示函数式编程中的惰性列表（Lazy List）与无限序列。
+ *
+ * 通过 Supplier 延迟求值实现 LazyList，构造从 2 开始的无限整数序列，
+ * 并结合埃拉托色尼筛法（Sieve of Eratosthenes）生成无限素数流，
+ * 展示惰性求值避免无限序列立即计算的核心思想。
+ */
 public class LazyLists {
 
     public static void main(String[] args) {

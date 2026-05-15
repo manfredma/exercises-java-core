@@ -8,7 +8,12 @@ import java.net.Socket;
 import java.util.Date;
 
 /**
- * @author manfred on 2019/9/8.
+ * BIO 一对一模型中处理单个客户端连接的请求处理器。
+ *
+ * 实现 {@link Runnable}，每个实例持有一个 {@link java.net.Socket}，
+ * 通过 {@link java.io.BufferedReader} 循环读取客户端发送的指令，
+ * 若为 "QUERY TIME ORDER" 则返回当前系统时间，否则返回 "BAD ORDER"，
+ * 演示 BIO 阻塞读写与按行协议解析的典型实现。
  */
 public class TimeServerHandler implements Runnable {
 

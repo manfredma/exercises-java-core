@@ -5,7 +5,11 @@ import java.nio.channels.AsynchronousSocketChannel;
 import java.nio.channels.CompletionHandler;
 
 /**
- * @author manfred on 2019/9/10.
+ * AIO 时间服务器的连接接受完成处理器。
+ *
+ * 实现 {@link CompletionHandler} 接口，在 {@link AsyncTimeServerHandler} 接受到新连接后被回调，
+ * 演示 AIO 异步 I/O 模型中连接事件的回调处理机制：继续注册下一个 accept 操作，
+ * 并为新连接创建 {@link ReadCompletionHandler} 开始异步读取客户端数据。
  */
 public class AcceptCompletionHandler implements CompletionHandler<AsynchronousSocketChannel, AsyncTimeServerHandler> {
     @Override

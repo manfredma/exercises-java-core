@@ -9,6 +9,12 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
+/**
+ * 演示使用 ByteBuddy 为动态生成的类添加自定义方法和字段。
+ *
+ * 通过 ByteBuddy defineMethod 和 defineField API 动态为类添加公共方法（委托给 Bar）
+ * 和公共字段，展示 ByteBuddy 在类结构层面进行字节码增强的能力。
+ */
 public class CreateMethodField {
     public static void main(String[] args) throws NoSuchMethodException, IllegalAccessException, InstantiationException,
             InvocationTargetException, NoSuchFieldException {

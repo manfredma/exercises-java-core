@@ -6,6 +6,12 @@ import java.util.Random;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Future;
 
+/**
+ * v1 版商店类，提供同步价格查询与手动创建 CompletableFuture 的异步价格查询。
+ *
+ * 对比 getPriceAsync 中显式创建 CompletableFuture 并在新线程中 complete 的写法，
+ * 演示 CompletableFuture 最基础的手动异步模式，以及与 supplyAsync 简化写法的差异。
+ */
 public class Shop {
 
     private final String name;

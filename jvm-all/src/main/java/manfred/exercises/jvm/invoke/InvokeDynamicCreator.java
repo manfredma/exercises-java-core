@@ -10,6 +10,13 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.lang.invoke.*;
 
+/**
+ * 使用 ASM 手工生成含有 invokedynamic 指令的字节码，演示动态调用点的完整创建流程。
+ *
+ * 通过 ASM ClassWriter 构建一个类，其 main 方法中包含 invokedynamic 指令，
+ * 引导方法（bootstrap method）在运行时将动态调用点绑定到具体的 MethodHandle，
+ * 用于深入理解 Lambda、方法引用等语言特性背后 JVM 动态调用机制的实现原理（JSR-292）。
+ */
 public class InvokeDynamicCreator {
 
     public static void main(final String[] args) throws Exception {

@@ -4,9 +4,13 @@ import org.msgpack.annotation.Message;
 
 import java.io.Serializable;
 import java.nio.ByteBuffer;
-
 /**
- * @author manfred on 2019/9/13.
+ * MessagePack 序列化练习中使用的用户信息实体类。
+ *
+ * 通过同时实现 {@code java.io.Serializable} 和标注 {@code @org.msgpack.annotation.Message}，
+ * 演示 MessagePack 对 POJO 的序列化支持；同时包含手动编码方法 {@code codeC()}，
+ * 展示基于 {@code ByteBuffer} 的低层次二进制编码实现，便于与 MessagePack 自动编码
+ * 在性能和代码复杂度上进行对比。
  */
 @Message
 public class UserInfo implements Serializable {

@@ -3,6 +3,12 @@ package manfred.exercises.lang.dsl.model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * DSL 练习中的订单领域模型，表示一笔包含多个交易的客户订单。
+ *
+ * 持有客户名称和交易列表，提供 getValue() 汇总所有交易金额，
+ * 作为 MethodChainingOrderBuilder、LambdaOrderBuilder 等各种 DSL 构建器的最终产物。
+ */
 public class Order {
 
     private String customer;

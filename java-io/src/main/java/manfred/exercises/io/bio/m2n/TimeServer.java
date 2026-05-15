@@ -7,7 +7,11 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
- * @author manfred on 2019/9/8.
+ * BIO 多对多模型的时间服务器启动入口，演示线程池版 BIO 服务端。
+ *
+ * 与 {@code bio.one2one.TimeServer} 的区别在于引入了 {@link TimeServerHandlerExecutorPool}
+ * 线程池来处理客户端请求，演示用有界线程池替代"一连接一线程"的伪异步 BIO 模型，
+ * 展示如何在传统阻塞 I/O 下通过线程池提升并发处理能力及资源控制能力。
  */
 public class TimeServer {
     public static void main(String[] args) throws IOException {

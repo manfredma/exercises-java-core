@@ -3,6 +3,13 @@ package manfred.exercises.lang.lambda.functional;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
+/**
+ * 演示用函数式方式模拟模式匹配（Pattern Matching）以化简和求值表达式树。
+ *
+ * 定义 Expr/Number/BinOp 表达式树，
+ * 通过 patternMatchExpr 方法接收三个函数参数分别处理二元操作、数值和默认情况，
+ * 在 Java 缺少原生模式匹配的情况下，用 Lambda 模拟访问者模式化简表达式。
+ */
 public class PatternMatching {
 
     public static void main(String[] args) {

@@ -6,6 +6,12 @@ import java.util.*;
 import static java.util.Comparator.comparingInt;
 import static java.util.stream.Collectors.*;
 
+/**
+ * 演示 Stream Collectors.partitioningBy 的二元分区用法。
+ *
+ * 涵盖按素食/非素食分区、分区后再按类型二次分组、以及 collectingAndThen 取各分区最高热量菜品，
+ * 展示 partitioningBy 作为 groupingBy 的特化版在布尔条件分类场景的简洁表达。
+ */
 public class Partitioning {
 
     public static void main(String ... args) {

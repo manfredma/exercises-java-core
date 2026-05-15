@@ -2,6 +2,13 @@ package manfred.exercises.lang.lambda.functional;
 
 import java.util.function.DoubleUnaryOperator;
 
+/**
+ * 演示函数式编程中的柯里化（Currying）技术。
+ *
+ * 通过 curriedConverter 和 expandedCurriedConverter 将双参数转换函数拆分为单参数函数，
+ * 生成摄氏度转华氏度、美元转英镑、公里转英里等可复用的单参数转换器，
+ * 展示柯里化如何从通用函数派生出领域专用函数。
+ */
 public class Currying {
 
     public static void main(String[] args) {

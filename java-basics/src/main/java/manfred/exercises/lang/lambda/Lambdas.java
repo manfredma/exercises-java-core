@@ -2,6 +2,13 @@ package manfred.exercises.lang.lambda;
 
 import java.util.*;
 
+/**
+ * 演示 Lambda 表达式的基础用法：行为参数化与 Comparator 排序。
+ *
+ * 包含使用自定义函数式接口 ApplePredicate 对苹果列表进行过滤，
+ * 以及传入 Lambda 表达式作为 Comparator 对列表排序，
+ * 是从策略模式过渡到 Lambda 行为参数化的入门示例。
+ */
 public class Lambdas {
 	public static void main(String ...args){
 

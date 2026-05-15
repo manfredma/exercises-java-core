@@ -9,9 +9,12 @@ import manfred.exercises.serialization.json.model.Customer;
 
 import java.util.ArrayList;
 import java.util.List;
-
 /**
- * @author manfred on 2022/5/23.
+ * 演示 Jackson 处理泛型集合类型的反序列化技巧。
+ *
+ * 练习使用 {@code TypeReference} 解决泛型类型擦除问题，将 JSON 数组正确
+ * 反序列化为 {@code List<String>} 或 {@code List<Integer>} 等泛型集合，
+ * 并结合集合操作（{@code removeAll}）对两个 JSON 数组数据做差集分析。
  */
 public class SimpleJacksonV2 {
 

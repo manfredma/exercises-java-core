@@ -38,6 +38,13 @@ ParallelStreamBenchmark.sequentialSum      avgt    4  54.893 ± 10.048  ms/op
 @Fork(value=2, jvmArgs={"-Xms4G", "-Xmx4G"})
 @Measurement(iterations=2)
 @Warmup(iterations=3)
+/**
+ * 用 JMH 对比迭代求和、顺序流、并行流和 LongStream 范围流的性能基准。
+ *
+ * 测试结果表明 Stream.iterate 并行化因自动装箱和无法拆分而性能反而更差，
+ * LongStream.rangeClosed 并行化才能真正发挥多核优势，
+ * 演示并行流正确使用的前提：数据结构可分解性与元素类型的原始化。
+ */
 public class ParallelStreamBenchmark {
 
     private static final long N = 10_000_000L;

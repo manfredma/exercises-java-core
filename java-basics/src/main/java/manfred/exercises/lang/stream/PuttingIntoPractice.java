@@ -5,6 +5,13 @@ import java.util.*;
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
 
+/**
+ * 综合练习：用 Stream API 回答关于交易员与交易记录的七个查询。
+ *
+ * 涵盖按年份过滤并排序、distinct 去重、多字段排序、reduce 拼接字符串、
+ * anyMatch 存在性检查、forEach 修改字段以及 reduce 求最大值，
+ * 是 Stream 中间操作与终端操作组合使用的综合演示。
+ */
 public class PuttingIntoPractice{
     public static void main(String ...args){    
         Trader raoul = new Trader("Raoul", "Cambridge");

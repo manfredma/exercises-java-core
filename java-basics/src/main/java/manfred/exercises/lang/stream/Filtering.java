@@ -5,6 +5,12 @@ import java.util.*;
 import static java.util.stream.Collectors.toList;
 
 
+/**
+ * 演示 Stream 的过滤与截断操作。
+ *
+ * 涵盖 filter（谓词过滤）、distinct（去重）、limit（截断取前 N 个）
+ * 和 skip（跳过前 N 个元素）四种基本流筛选操作的用法与组合。
+ */
 public class Filtering{
 
     public static void main(String...args){

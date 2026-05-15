@@ -6,6 +6,13 @@ import manfred.exercises.lang.dsl.model.Trade;
 
 import java.util.function.Consumer;
 
+/**
+ * 使用 Lambda（函数式接口 Consumer）风格实现的订单 DSL 构建器。
+ *
+ * 通过嵌套的 Consumer 回调描述订单结构（客户、买卖交易、股票），
+ * 与 MethodChainingOrderBuilder 和 NestedFunctionOrderBuilder 形成三种 DSL 风格对比，
+ * 展示 Lambda 方式的简洁性与上下文传递能力。
+ */
 public class LambdaOrderBuilder {
 
     private Order order = new Order();

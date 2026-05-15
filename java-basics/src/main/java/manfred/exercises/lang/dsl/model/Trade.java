@@ -1,5 +1,12 @@
 package manfred.exercises.lang.dsl.model;
 
+/**
+ * DSL 练习中的交易领域模型，表示一笔股票买入或卖出交易。
+ *
+ * 包含交易类型（BUY/SELL）、关联股票、数量和价格，
+ * getValue() 返回数量与价格的乘积，
+ * 作为 Order 的组成部分，由各种 DSL 构建器填充并组装。
+ */
 public class Trade {
 
     public enum Type {BUY, SELL}

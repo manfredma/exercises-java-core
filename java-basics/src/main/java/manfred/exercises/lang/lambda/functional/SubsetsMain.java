@@ -5,6 +5,12 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * 演示用纯函数式递归方式生成集合的所有子集（幂集）。
+ *
+ * subsets 方法通过"取首元素 + 递归剩余元素子集 + 与首元素组合"的函数式思路，
+ * 返回包含所有子集的列表，体现分治与不可变列表操作的函数式编程风格。
+ */
 public class SubsetsMain {
 
     public static void main(String[] args) {

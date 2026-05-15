@@ -23,6 +23,14 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
+/**
+ * 全面演示 Java 8 新日期时间 API 的核心用法。
+ *
+ * 涵盖旧版 Date/Calendar 的使用方式、LocalDate/LocalTime/LocalDateTime/Instant/Duration
+ * 的创建与字段读取、TemporalAdjuster 自定义日期调整（如跳过周末取下一工作日），
+ * 以及 DateTimeFormatter 的多种格式化与国际化输出，
+ * 对比新旧 API 的设计差异与线程安全性优势。
+ */
 public class DateTimeExamples {
 
     private static final ThreadLocal<DateFormat> formatters = new ThreadLocal<DateFormat>() {

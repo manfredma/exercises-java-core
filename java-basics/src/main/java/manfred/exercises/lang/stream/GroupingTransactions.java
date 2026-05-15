@@ -4,6 +4,13 @@ import java.util.*;
 
 import static java.util.stream.Collectors.groupingBy;
 
+/**
+ * 对比命令式循环与 Stream groupingBy 两种方式按货币分组交易。
+ *
+ * groupImperatively 用 HashMap + for 循环手动构建分组映射；
+ * groupFunctionally 一行 stream().collect(groupingBy(...)) 完成相同工作，
+ * 直观说明流式 API 在数据聚合场景下的简洁优势。
+ */
 public class GroupingTransactions {
 
     public static List<Transaction> transactions = Arrays.asList( new Transaction(Currency.EUR, 1500.0),

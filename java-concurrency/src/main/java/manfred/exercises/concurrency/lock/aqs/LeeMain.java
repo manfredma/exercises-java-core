@@ -2,6 +2,12 @@ package manfred.exercises.concurrency.lock.aqs;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 验证自定义 AQS 锁 LeeLock 的互斥正确性。
+ *
+ * 启动两个线程并发对共享变量 count 执行累加，通过 LeeLock 保证互斥访问，
+ * 最终打印结果验证是否为期望的 20000，测试自定义 AQS 锁的线程安全性。
+ */
 public class LeeMain {
 
     static int count = 0;

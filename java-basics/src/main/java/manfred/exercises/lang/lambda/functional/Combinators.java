@@ -2,6 +2,13 @@ package manfred.exercises.lang.lambda.functional;
 
 import java.util.function.Function;
 
+/**
+ * 演示函数式编程中的函数组合（Combinators）模式。
+ *
+ * 实现通用的 compose 方法将两个函数 g、f 组合为 g(f(x))，
+ * 以及 repeat 方法通过递归将一个函数重复应用 n 次，
+ * 体现高阶函数在函数式编程中的组合能力。
+ */
 public class Combinators {
 
     public static void main(String[] args) {

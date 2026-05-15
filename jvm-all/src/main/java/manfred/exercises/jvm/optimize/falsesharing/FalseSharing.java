@@ -1,5 +1,12 @@
 package manfred.exercises.jvm.optimize.falsesharing;
 
+/**
+ * 对比有缓存行填充（ValuePadding）与无填充（ValueNoPadding）下多线程写操作的性能差异。
+ *
+ * ValuePadding 通过在 volatile long value 前后各填充 7 个 long 字段，确保每个实例
+ * 独占一条 CPU 缓存行，避免多线程同时写不同实例时产生伪共享；
+ * ValueNoPadding 无填充，多个实例可能共享缓存行从而造成性能下降。
+ */
 public class FalseSharing implements Runnable {
     public final static long ITERATIONS = 500L * 1000L * 100L;
     private int arrayIndex = 0;

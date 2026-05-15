@@ -11,6 +11,13 @@ import static java.util.stream.Collectors.groupingBy;
 import static manfred.exercises.lang.stream.Dish.menu;
 import static manfred.exercises.lang.dsl.Grouping.GroupingBuilder.groupOn;
 
+/**
+ * 演示使用 Stream Collectors 实现多级分组，以及自定义 GroupingBuilder DSL。
+ *
+ * 通过 groupingBy 嵌套实现按菜品类型和热量等级的二级分组，
+ * 并引入 GroupingBuilder 构建器模式，以链式 API（.after().get()）
+ * 替代原始的嵌套 groupingBy，体现 DSL 风格简化复杂 Collector 组合的思路。
+ */
 public class Grouping {
 
     enum CaloricLevel { DIET, NORMAL, FAT };

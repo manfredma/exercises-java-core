@@ -12,7 +12,11 @@ import java.util.Iterator;
 import java.util.Set;
 
 /**
- * @author manfred on 2019/9/8.
+ * NIO 多路复用时间服务器，演示基于 Selector 的非阻塞 I/O 服务端核心实现。
+ *
+ * 使用 {@link java.nio.channels.Selector} 同时监控多个 {@link java.nio.channels.ServerSocketChannel}
+ * 和 {@link java.nio.channels.SocketChannel} 上的 I/O 事件，通过单线程轮询就绪事件，
+ * 实现对 "QUERY TIME ORDER" 指令的响应，展示 NIO 多路复用模型相比 BIO 一连接一线程的优势。
  */
 public class MultiplexerTimeServer implements Runnable {
 

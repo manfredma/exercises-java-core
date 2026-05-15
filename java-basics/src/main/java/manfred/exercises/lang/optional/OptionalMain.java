@@ -7,6 +7,12 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Stream;
 
+/**
+ * 演示 Optional 的 flatMap 链式调用与 Stream 结合处理可空值。
+ *
+ * getCarInsuranceName 方法展示多层 flatMap/map 链安全获取嵌套对象属性，
+ * getCarInsuranceNames 方法演示 stream + flatMap 将 Optional 流扁平化为实际值的集合。
+ */
 public class OptionalMain {
 
     public String getCarInsuranceName(Optional<Person> person) {

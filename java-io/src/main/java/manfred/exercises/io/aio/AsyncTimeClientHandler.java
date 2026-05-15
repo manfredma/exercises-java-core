@@ -10,7 +10,11 @@ import java.nio.channels.CompletionHandler;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * @author manfred on 2019/9/10.
+ * AIO 时间客户端的异步连接与读写处理器。
+ *
+ * 同时实现 {@link CompletionHandler} 和 {@link Runnable}，演示 AIO 客户端的完整交互流程：
+ * 在独立线程中发起异步连接，连接成功后异步写入请求，写入完成后异步读取服务端响应，
+ * 通过 {@link CountDownLatch} 阻塞等待整个异步流程结束，展示 AIO 回调链式编程模式。
  */
 public class AsyncTimeClientHandler implements CompletionHandler<Void, AsyncTimeClientHandler>, Runnable {
 

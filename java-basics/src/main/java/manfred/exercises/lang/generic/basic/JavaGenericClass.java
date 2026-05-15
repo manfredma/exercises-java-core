@@ -1,7 +1,10 @@
 package manfred.exercises.lang.generic.basic;
-
 /**
+ * 演示 Java 泛型类与泛型方法的基本定义和使用。
  *
+ * 泛型类 JavaGenericClass&lt;T&gt; 封装单个类型参数的字段，
+ * 并包含独立的泛型方法 convert&lt;M&gt;，
+ * 展示类级别泛型参数与方法级别泛型参数的独立声明方式。
  */
 public class JavaGenericClass<T> {
 

@@ -1,7 +1,10 @@
 package manfred.exercises.io.nio.time;
 
 /**
- * @author manfred on 2019/9/8.
+ * NIO 时间服务器的启动入口类。
+ *
+ * 解析命令行端口参数，创建 {@link MultiplexerTimeServer} 并以命名线程启动，
+ * 演示 NIO 多路复用服务端的整体启动方式，与 BIO/AIO 服务端启动方式并列对比学习。
  */
 public class TimeServer {
     public static void main(String[] args) {

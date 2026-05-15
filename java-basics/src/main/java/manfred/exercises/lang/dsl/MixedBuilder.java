@@ -7,6 +7,13 @@ import manfred.exercises.lang.dsl.model.Trade;
 import java.util.function.Consumer;
 import java.util.stream.Stream;
 
+/**
+ * 混合风格 DSL 的构建器实现，结合嵌套函数与 Lambda Consumer。
+ *
+ * forCustomer 接收 TradeBuilder 可变参数描述订单整体，
+ * buy/sell 接收 Consumer&lt;TradeBuilder&gt; 描述单笔交易细节，
+ * 内部 StockBuilder 通过方法链完成股票配置。
+ */
 public class MixedBuilder {
 
     public static Order forCustomer(String customer, TradeBuilder... builders) {

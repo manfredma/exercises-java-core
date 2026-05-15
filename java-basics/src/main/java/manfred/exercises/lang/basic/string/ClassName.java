@@ -10,7 +10,7 @@ public class ClassName {
         s = s.toLowerCase();
         s = s.replace(" ", ".");
         s = s.replace("..", ".");
-        s = s + ".Main";
+        s = s + ".ClassInitOrderDemo";
         StringBuffer sb = new StringBuffer();
         for (int i = 0; i < s.length(); i++) {
             if (Character.isLetterOrDigit(s.charAt(i)) || '.' == (s.charAt(i))) {

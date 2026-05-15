@@ -8,6 +8,12 @@ import java.util.Random;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
+/**
+ * CompletableFuture 练习的公共工具类，提供延迟模拟和数字格式化方法。
+ *
+ * delay() 方法模拟固定 1 秒的远程 IO 延迟；format() 使用同步格式化保证线程安全；
+ * sequence() 展示将 List&lt;CompletableFuture&lt;T&gt;&gt; 合并为单个 CompletableFuture 的两种写法对比。
+ */
 public class Util {
 
     private static final Random RANDOM = new Random(0);

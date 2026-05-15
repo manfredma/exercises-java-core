@@ -6,6 +6,13 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 
+/**
+ * 从本地磁盘读取 .class 文件字节码并定义类的自定义类加载器。
+ *
+ * 继承 ClassLoader 并重写 findClass 方法，从指定路径读取类文件的原始字节数组，
+ * 再调用 defineClass 将其注册到 JVM 中。用于演示自定义类加载器绕过双亲委派模型
+ * 直接从文件系统加载类的机制（在 agent/basic 包下用于 Agent 相关演示）。
+ */
 public class DiskClassLoader extends ClassLoader {
 
     private String path;

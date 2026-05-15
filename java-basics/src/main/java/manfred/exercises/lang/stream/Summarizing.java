@@ -6,6 +6,13 @@ import java.util.function.*;
 
 import static java.util.stream.Collectors.*;
 
+/**
+ * 演示 Stream Collectors 的多种汇总操作。
+ *
+ * 涵盖 counting（计数）、reducing/maxBy（最大值）、summingInt（求和）、
+ * averagingInt（平均值）、summarizingInt（统计摘要）以及 joining（字符串拼接），
+ * 全面展示收集器在数值统计与字符串聚合场景下的用法。
+ */
 public class Summarizing {
 
     public static void main(String ... args) {

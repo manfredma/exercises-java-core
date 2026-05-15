@@ -4,6 +4,13 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * 演示 SimpleDateFormat 对不同国际化日期格式的格式化输出。
+ *
+ * 展示同一个 Date 对象在 dd-MM-yy、MM-dd-yyyy、yyyy-MM-dd HH:mm:ss
+ * 以及包含星期、时区等完整格式字符串下的输出结果，
+ * 练习 SimpleDateFormat 的模式字符与国际化日期处理。
+ */
 public class I18NTester {
     public static void main(String[] args) throws ParseException {
         String pattern = "dd-MM-yy";

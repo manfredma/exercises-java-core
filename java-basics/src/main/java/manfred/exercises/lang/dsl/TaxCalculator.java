@@ -5,6 +5,13 @@ import manfred.exercises.lang.dsl.model.Tax;
 
 import java.util.function.Function;
 
+/**
+ * 演示多种方式组合税率计算，对比命令式、方法链与函数式组合风格。
+ *
+ * 静态方法 calculate 通过布尔标志选择税种；实例方法链通过 withTaxXxx 积累配置；
+ * 函数式版本通过 Function.andThen 将税率函数组合为管道，
+ * 对比三种风格在可读性、扩展性与函数复用上的差异。
+ */
 public class TaxCalculator {
 
     public static double calculate( Order order, boolean useRegional, boolean useGeneral, boolean useSurcharge ) {

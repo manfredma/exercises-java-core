@@ -9,6 +9,13 @@ import net.bytebuddy.implementation.bind.annotation.BindingPriority;
 
 import static net.bytebuddy.matcher.ElementMatchers.*;
 
+/**
+ * 演示使用 ByteBuddy 结合 Java Agent 对已加载类的方法进行热重定义。
+ *
+ * 通过 ByteBuddyAgent.install() 安装代理，再使用 ClassReloadingStrategy 将
+ * Foo.sayHelloFoo 的实现替换为返回固定字符串，展示了在不重启 JVM 的前提下
+ * 修改已有类行为的热部署能力，是理解 Java Instrumentation redefineClasses 的实践演示。
+ */
 public class RedefineMethod {
 
     public static void main(String[] args) throws IllegalAccessException, InstantiationException {

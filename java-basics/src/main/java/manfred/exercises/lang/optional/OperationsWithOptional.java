@@ -5,6 +5,12 @@ import static java.util.Optional.of;
 
 import java.util.Optional;
 
+/**
+ * 演示 Optional 的组合操作与 flatMap/map 的嵌套使用。
+ *
+ * 通过 max 方法展示两个 Optional<Integer> 之间用 flatMap + map 求最大值，
+ * 避免显式判空，体现 Optional 在处理可能缺失值时的函数式链式调用风格。
+ */
 public class OperationsWithOptional {
 
     public static void main(String... args) {

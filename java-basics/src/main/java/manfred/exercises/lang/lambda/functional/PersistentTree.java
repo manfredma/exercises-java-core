@@ -1,5 +1,12 @@
 package manfred.exercises.lang.lambda.functional;
 
+/**
+ * 演示持久化二叉搜索树（Persistent BST）的函数式更新。
+ *
+ * fupdate 方法在更新节点时创建新路径而不修改原树（持久化方式），
+ * update 方法直接修改节点（破坏性方式），
+ * 通过对比验证持久化方式保留了原树的不变性，适用于需要历史版本的场景。
+ */
 public class PersistentTree {
 
     public static void main(String[] args) {

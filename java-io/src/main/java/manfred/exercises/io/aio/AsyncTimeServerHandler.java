@@ -6,7 +6,11 @@ import java.nio.channels.AsynchronousServerSocketChannel;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * @author manfred on 2019/9/10.
+ * AIO 时间服务器的异步处理器，负责启动并维持服务端的生命周期。
+ *
+ * 实现 {@link Runnable} 接口，封装 {@link java.nio.channels.AsynchronousServerSocketChannel} 的初始化与绑定，
+ * 演示 AIO 服务端的启动流程：开启异步服务通道、注册 accept 操作并通过 {@link CountDownLatch}
+ * 阻塞主线程，直到服务关闭，展示 AIO 异步非阻塞 I/O 的服务端驱动模型。
  */
 public class AsyncTimeServerHandler implements Runnable {
 

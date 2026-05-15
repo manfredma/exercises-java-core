@@ -3,6 +3,13 @@ package manfred.exercises.lang.refactoring;
 import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
+/**
+ * 演示职责链模式的传统实现与 Lambda 函数组合两种写法。
+ *
+ * 传统方式通过 ProcessingObject 抽象类链接处理器；
+ * Lambda 方式用 UnaryOperator.andThen 将多个处理函数组合为管道，
+ * 对比两者在代码简洁性和可扩展性上的差异。
+ */
 public class ChainOfResponsibilityMain {
 
     public static void main(String[] args) {

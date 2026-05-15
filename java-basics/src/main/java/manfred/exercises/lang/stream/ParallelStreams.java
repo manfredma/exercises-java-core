@@ -2,6 +2,13 @@ package manfred.exercises.lang.stream;
 
 import java.util.stream.*;
 
+/**
+ * 对比顺序流、并行流与有状态并行求和的正确性和性能问题。
+ *
+ * sideEffectParallelSum 演示并行流中共享可变状态导致结果不正确的竞争条件，
+ * rangedSum 和 parallelRangedSum 展示 LongStream.rangeClosed 在并行化中的安全性，
+ * 说明并行流要求操作无副作用、数据结构可分解的核心原则。
+ */
 public class ParallelStreams {
 
     public static long iterativeSum(long n) {

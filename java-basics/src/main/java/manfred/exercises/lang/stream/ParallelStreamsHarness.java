@@ -3,6 +3,12 @@ package manfred.exercises.lang.stream;
 import java.util.concurrent.*;
 import java.util.function.*;
 
+/**
+ * 手动测量多种求和实现的执行耗时，对比顺序与并行性能。
+ *
+ * 通过 measurePerf 方法对迭代、顺序流、并行流、范围流、Fork/Join 等七种实现
+ * 各运行 10 次并取最小值，提供不依赖 JMH 的轻量级性能对比入口。
+ */
 public class ParallelStreamsHarness {
 
     public static final ForkJoinPool FORK_JOIN_POOL = new ForkJoinPool();

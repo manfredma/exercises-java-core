@@ -8,7 +8,11 @@ import java.nio.channels.CompletionHandler;
 import java.util.Date;
 
 /**
- * @author manfred on 2019/9/10.
+ * AIO 时间服务器的读取完成处理器，负责解析请求并异步回写响应。
+ *
+ * 实现 {@link CompletionHandler} 接口，在异步读取客户端数据完成后被回调，
+ * 演示 AIO 读写完成回调的处理模式：将读到的字节解码为字符串，判断是否为
+ * "QUERY TIME ORDER" 指令，若是则异步写回当前系统时间，否则回写 "BAD ORDER"。
  */
 public class ReadCompletionHandler implements CompletionHandler<Integer, ByteBuffer> {
 

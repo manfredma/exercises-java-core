@@ -3,6 +3,13 @@ package manfred.exercises.lang.refactoring;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 演示观察者模式的传统类实现与 Lambda 两种写法。
+ *
+ * 传统方式定义 NYTimes/Guardian/LeMonde 等具体观察者类；
+ * Lambda 方式直接传入行为函数作为观察者，省去定义实现类的样板代码，
+ * 适用于观察者逻辑简单、无需复用的场景。
+ */
 public class ObserverMain {
 
     public static void main(String[] args) {

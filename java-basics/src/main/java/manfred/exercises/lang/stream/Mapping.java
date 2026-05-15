@@ -4,6 +4,13 @@ import static manfred.exercises.lang.stream.Dish.menu;
 import java.util.*;
 import static java.util.stream.Collectors.toList;
 
+/**
+ * 演示 Stream 的 map 与 flatMap 操作。
+ *
+ * map 用于元素级转换（提取字段、计算长度）；
+ * flatMap 将流中每个元素映射为子流再合并，用于字符串拆分去重和笛卡尔积生成，
+ * 对比两者在处理嵌套结构时的差异。
+ */
 public class Mapping{
 
     public static void main(String...args){

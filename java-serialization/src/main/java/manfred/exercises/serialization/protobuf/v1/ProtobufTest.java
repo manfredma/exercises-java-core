@@ -2,6 +2,14 @@ package manfred.exercises.serialization.protobuf.v1;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 import org.junit.Test;
+/**
+ * 演示 Protocol Buffers v1 版本中 Person 消息的序列化与反序列化完整流程。
+ *
+ * 练习使用生成的 {@code PersonModel.Person} Builder 构建消息对象，
+ * 通过 {@code toByteArray()} 将其编码为二进制字节数组，再通过 {@code parseFrom(byte[])}
+ * 从字节数组还原为 Person 对象，并打印各字段值，验证 Protobuf 编解码的正确性与
+ * 二进制格式的紧凑性。
+ */
 public class ProtobufTest {
     @Test
     public void testN() throws InvalidProtocolBufferException {

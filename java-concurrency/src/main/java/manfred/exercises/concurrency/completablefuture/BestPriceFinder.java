@@ -9,6 +9,13 @@ import java.util.concurrent.ThreadFactory;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * 演示多商店价格查询的顺序、并行流与 CompletableFuture 三种实现方式对比。
+ *
+ * 展示 Stream 顺序流、parallelStream 并行流，以及基于 CompletableFuture 的
+ * thenApply / thenCompose 流水线异步组合，并通过自定义线程池 Executor 控制并发度，
+ * 体现异步编排在多 IO 密集型任务中的性能优势。
+ */
 public class BestPriceFinder {
 
     private final List<Shop> shops = Arrays.asList(new Shop("BestPrice"),

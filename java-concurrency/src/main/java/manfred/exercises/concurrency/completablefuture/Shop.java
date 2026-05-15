@@ -6,6 +6,13 @@ import static manfred.exercises.concurrency.completablefuture.Util.delay;
 import static manfred.exercises.concurrency.completablefuture.Util.format;
 import java.util.Random;
 
+/**
+ * 模拟带网络延迟的同步商品价格查询商店。
+ *
+ * 返回格式为 "shopName:price:discountCode" 的价格字符串，
+ * 通过 delay() 模拟 1 秒的远程 IO 延迟，用于对比
+ * 顺序流、并行流与 CompletableFuture 异步流水线在多商店查询场景下的性能表现。
+ */
 public class Shop {
 
     private final String name;

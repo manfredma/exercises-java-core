@@ -1,7 +1,9 @@
 package manfred.exercises.lang.defaultmethod;
-
 /**
- * Created by raoul-gabrielurma on 15/01/2014.
+ * 定义可绘制对象的基础接口。
+ *
+ * 作为 Resizable 接口的父接口，规定实现类必须提供 draw() 方法，
+ * 演示接口继承在 default 方法体系中的角色。
  */
 public interface Drawable{
     public void draw();

@@ -3,6 +3,13 @@ package manfred.exercises.lang.basic.big;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
+/**
+ * 演示 BigDecimal 的精度控制与运算行为。
+ *
+ * 涵盖 setScale 设置精度与舍入模式、加减乘除运算后 scale 的变化规律，
+ * 以及 BigDecimal("0.00") 与 BigDecimal("0") 在 scale 上的差异，
+ * 帮助理解金融场景下精确数值计算的正确姿势。
+ */
 public class BigDecimalTests {
     public static void main(String[] args) {
         BigDecimal x = new BigDecimal(2).setScale(10, RoundingMode.DOWN);

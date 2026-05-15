@@ -16,6 +16,14 @@ class SubClass2<T> extends ParentGeneric<T> {
 
 }
 
+/**
+ * 演示通过反射在运行时获取泛型实际类型参数。
+ *
+ * 利用 Class.getGenericSuperclass() 与 ParameterizedType.getActualTypeArguments()
+ * 获取子类固化的泛型类型，对比直接继承具体类型（SubClass）与保留泛型（SubClass2）、
+ * 匿名子类（parentGeneric2）三种场景下能否成功获取实际类型参数的差异，
+ * 帮助理解 Java 泛型擦除与类型令牌（Type Token）技巧。
+ */
 public class GenericGet {
 
     //获取实际的泛型类型

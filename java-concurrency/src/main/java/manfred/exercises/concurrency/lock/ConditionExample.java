@@ -7,6 +7,12 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * 演示 ReentrantLock 与 Condition 实现线程间等待/通知的生产者消费者模型。
+ *
+ * 通过 TaskQueue 内部类展示 Condition.await() 与 Condition.signalAll() 的配套使用，
+ * 说明 Condition 相较于 Object.wait/notify 在同一把锁上支持多个等待队列的优势。
+ */
 public class ConditionExample {
     public static void main(String[] args) throws InterruptedException {
         TaskQueue taskQueue = new TaskQueue();

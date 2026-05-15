@@ -4,6 +4,12 @@ import static manfred.exercises.lang.stream.Dish.menu;
 import java.util.*;
 
 
+/**
+ * 演示 Stream 的查找与匹配操作。
+ *
+ * 涵盖 anyMatch（至少一个匹配）、allMatch（全部匹配）、noneMatch（无一匹配）
+ * 和 findAny（返回 Optional 任意匹配元素）四种短路终端操作的用法。
+ */
 public class Finding{
 
     public static void main(String...args){

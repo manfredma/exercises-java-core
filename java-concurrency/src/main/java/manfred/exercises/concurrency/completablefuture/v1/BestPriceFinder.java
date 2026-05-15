@@ -17,6 +17,13 @@ import java.util.stream.Stream;
 import manfred.exercises.concurrency.completablefuture.ExchangeService;
 import manfred.exercises.concurrency.completablefuture.ExchangeService.Money;
 
+/**
+ * v1 版本的多商店价格查询器，演示 CompletableFuture 的多种并发组合模式。
+ *
+ * 在顺序流、并行流、CompletableFuture 三种基础方案之上，进一步展示
+ * thenCombine 合并价格查询与汇率查询两个异步任务，以及 Java 7 风格的
+ * Future 实现对比，帮助理解异步编排的演进过程。
+ */
 public class BestPriceFinder {
 
     private final List<Shop> shops = Arrays.asList(new Shop("BestPrice"),

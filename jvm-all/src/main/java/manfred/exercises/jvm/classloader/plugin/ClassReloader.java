@@ -8,6 +8,13 @@ import java.io.FileInputStream;
 
 import java.io.InputStream;
 
+/**
+ * 支持类重新加载的自定义类加载器，演示不同加载器实例隔离同名类的机制。
+ *
+ * 每个 ClassReloader 实例都能独立加载同一个类并创建全新的 Class 对象，
+ * 用于模拟插件热重载场景。同时通过注释展示了对同一加载器实例重复 findClass
+ * 会触发 LinkageError 的错误，加深对类加载器实例与类身份绑定关系的理解。
+ */
 public class ClassReloader extends ClassLoader {
 
     private String classPath;
@@ -52,12 +59,12 @@ public class ClassReloader extends ClassLoader {
         try {
             String path = "jvm/jvm-classloader/clazz/";
             ClassReloader reloader = new ClassReloader(path);
-            Class r = reloader.findClass("manfred.end.clazz.loader.X");
+            Class r = reloader.findClass("manfred.end.clazz.loader.SampleDataObject");
             System.out.println((r.newInstance()));
             ClassReloader reloader1 = new ClassReloader(path);
             // 如果 r1 继续通过 reloader 进行加载则会出现重复类的错误
-            // java.lang.LinkageError: loader (instance of  manfred/end/plugin/ClassReloader): attempted  duplicate class definition for name: "manfred/end/clazz/loader/X"
-            Class r1 = reloader1.findClass("manfred.end.clazz.loader.X");
+            // java.lang.LinkageError: loader (instance of  manfred/end/plugin/ClassReloader): attempted  duplicate class definition for name: "manfred/end/clazz/loader/SampleDataObject"
+            Class r1 = reloader1.findClass("manfred.end.clazz.loader.SampleDataObject");
             System.out.println((r1.newInstance()));
         } catch (Exception e) {
             e.printStackTrace();

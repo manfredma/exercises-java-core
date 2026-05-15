@@ -1,5 +1,11 @@
 package manfred.exercises.lang.stream;
 
+/**
+ * Stream 综合练习中的交易记录领域模型。
+ *
+ * 持有交易员、年份和金额三个字段，与 Trader 类共同构成练习数据，
+ * 用于 PuttingIntoPractice 中演示 Stream 过滤、排序、聚合等综合操作。
+ */
 public class Transaction{
 
 	private Trader trader;

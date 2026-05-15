@@ -4,9 +4,11 @@ import java.util.Arrays;
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;
-
 /**
- * Created by raoul-gabrielurma on 14/01/2014.
+ * 演示 Stream 的惰性求值特性。
+ *
+ * 在 filter 和 map 操作中插入打印语句，通过 limit(2) 触发短路求值，
+ * 观察流水线只处理满足条件的最少元素，说明中间操作延迟执行直到终端操作被调用的机制。
  */
 public class Laziness {
 

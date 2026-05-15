@@ -6,6 +6,13 @@ import net.bytebuddy.implementation.bind.annotation.BindingPriority;
 
 import static net.bytebuddy.matcher.ElementMatchers.*;
 
+/**
+ * 演示使用 ByteBuddy 对已有类的方法进行拦截并委托给另一个类处理。
+ *
+ * 通过 MethodDelegation 机制将 Foo.sayHelloFoo 的调用委托给 Bar 中带有
+ * @BindingPriority 注解的方法，体现了 ByteBuddy 实现 AOP 方法拦截的核心用法，
+ * 同时演示了多个候选委托方法时优先级注解的作用。
+ */
 public class MethodInterceptor {
 
     public static void main(String[] args) throws IllegalAccessException, InstantiationException {

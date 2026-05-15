@@ -1,7 +1,10 @@
 package manfred.exercises.lang.defaultmethod;
-
 /**
- * Created by raoul-gabrielurma on 15/01/2014.
+ * Resizable 接口的三角形实现，用于 default 方法演示场景。
+ *
+ * 实现了 Resizable（继承自 Drawable）的所有抽象方法，
+ * 与 Square、Ellipse 共同作为可调整大小图形的具体实现，
+ * 配合 Game 和 Utils 演示面向接口的多态调用。
  */
 public class Triangle implements Resizable {
     @Override

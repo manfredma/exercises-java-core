@@ -8,7 +8,11 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 /**
- * @author manfred on 2019/9/8.
+ * BIO 一对一模型的时间查询客户端。
+ *
+ * 使用传统阻塞 I/O 的 {@link java.net.Socket} 连接服务端，
+ * 演示通过 {@link java.io.BufferedReader} 和 {@link java.io.PrintWriter} 收发文本消息的基本用法，
+ * 发送 "QUERY TIME ORDER" 指令并打印服务端返回的当前时间。
  */
 public class TimeClient {
     public static void main(String[] args) throws IOException {

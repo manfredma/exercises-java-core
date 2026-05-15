@@ -2,6 +2,13 @@ package manfred.exercises.concurrency.lock.aqs;
 
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 
+/**
+ * 基于 AbstractQueuedSynchronizer 手写的简易独占锁实现。
+ *
+ * 通过内部 Sync 类重写 tryAcquire、tryRelease 和 isHeldExclusively 三个方法，
+ * 演示 AQS 状态位（state）的 CAS 操作实现互斥锁的核心原理，
+ * 帮助理解 ReentrantLock、Semaphore 等 JUC 同步器的底层 AQS 机制。
+ */
 public class LeeLock  {
 
     private static class Sync extends AbstractQueuedSynchronizer {

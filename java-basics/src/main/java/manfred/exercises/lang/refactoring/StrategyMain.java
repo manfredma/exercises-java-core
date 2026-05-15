@@ -1,5 +1,12 @@
 package manfred.exercises.lang.refactoring;
 
+/**
+ * 演示策略模式的传统类实现与 Lambda 两种写法。
+ *
+ * 传统方式定义 IsNumeric/IsAllLowerCase 策略实现类；
+ * Lambda 方式直接传入校验逻辑函数，消除策略类定义，
+ * 对比说明 Lambda 简化策略模式的效果及适用场景。
+ */
 public class StrategyMain {
 
     public static void main(String[] args) {

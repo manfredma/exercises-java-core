@@ -4,8 +4,16 @@ import java.util.*;
 import java.util.function.IntSupplier;
 import java.util.stream.*;
 import java.nio.charset.Charset;
+import java.net.URI;
 import java.nio.file.*;
 
+/**
+ * 演示多种创建 Stream 的方式。
+ *
+ * 涵盖 Stream.of、Stream.empty、Arrays.stream、Stream.iterate（含斐波那契数列）、
+ * Stream.generate、IntStream.generate 以及从文件读取行并统计唯一单词，
+ * 全面展示 Java 8 流的各类构建入口。
+ */
 public class BuildingStreams {
 
     public static void main(String...args) throws Exception{
@@ -65,7 +73,7 @@ public class BuildingStreams {
               };
          IntStream.generate(fib).limit(10).forEach(System.out::println);
 
-         long uniqueWords = Files.lines(Paths.get("java-language/java8/src/main/resources/chap5/data.txt"), Charset.defaultCharset())
+         long uniqueWords = Files.lines(Paths.get(BuildingStreams.class.getResource("/manfred/exercises/lang/stream/data.txt").toURI()), Charset.defaultCharset())
                                  .flatMap(line -> Arrays.stream(line.split(" ")))
                                  .distinct()
                                  .count();

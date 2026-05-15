@@ -5,6 +5,12 @@ import java.util.stream.*;
 import java.util.*;
 
 
+/**
+ * 演示数值流 IntStream/LongStream 的特化操作。
+ *
+ * 涵盖 mapToInt + sum/max、OptionalInt 处理缺失值、IntStream.rangeClosed 生成数值范围，
+ * 以及用 flatMap + filter 生成勾股数组合，展示数值流在避免装箱开销方面的优势。
+ */
 public class NumericStreams{
 
     public static void main(String...args){

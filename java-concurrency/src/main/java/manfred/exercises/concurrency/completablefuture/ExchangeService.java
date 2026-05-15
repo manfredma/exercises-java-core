@@ -3,6 +3,12 @@ package manfred.exercises.concurrency.completablefuture;
 import static manfred.exercises.concurrency.completablefuture.Util.delay;
 
 
+/**
+ * 模拟带网络延迟的货币汇率查询服务。
+ *
+ * 定义 USD/EUR/GBP/CAD/MXN 汇率枚举，通过 delay() 模拟远程 IO 耗时，
+ * 配合 CompletableFuture.thenCombine 演示两个异步任务（价格查询 + 汇率查询）的并行合并。
+ */
 public class ExchangeService {
 
     public enum Money {

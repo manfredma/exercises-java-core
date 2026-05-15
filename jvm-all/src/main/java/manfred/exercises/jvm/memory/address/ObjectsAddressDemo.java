@@ -8,6 +8,13 @@ import java.lang.reflect.Field;
 
 //取消显示的警告集
 @SuppressWarnings("restriction")
+/**
+ * 演示通过 Unsafe 和 JOL 工具观察 GC 前后 Java 对象内存地址变化。
+ *
+ * 利用 sun.misc.Unsafe 的数组偏移量方法和 JOL（Java Object Layout）库的
+ * VM.current().addressOf() 分别打印对象的堆地址，在 System.gc() 前后各打印一次，
+ * 用于直观展示 GC 整理阶段对象在内存中发生移动的现象。
+ */
 public class ObjectsAddressDemo {
 
     static final Unsafe unsafe = getUnsafe();

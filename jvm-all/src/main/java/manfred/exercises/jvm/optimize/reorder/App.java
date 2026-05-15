@@ -1,5 +1,12 @@
 package manfred.exercises.jvm.optimize.reorder;
 
+/**
+ * 演示 JVM 指令重排序在多线程场景下导致不符合直觉的执行结果。
+ *
+ * 一个线程按顺序写 a、b、c，另一个线程逆序读取，若出现 b==1 但 a==0 等异常状态，
+ * 说明写操作被 JIT 或 CPU 重排序。通过大量重复执行提高触发概率，
+ * 用于理解 happens-before 原则缺失时内存可见性和指令有序性问题。
+ */
 public class App {
 
     public static void main(String[] args) {

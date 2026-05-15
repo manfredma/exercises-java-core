@@ -2,6 +2,14 @@ package manfred.exercises.lang.lambda.functional;
 
 import java.util.stream.LongStream;
 
+/**
+ * 演示阶乘计算的四种实现方式：迭代、普通递归、Stream 与尾递归。
+ *
+ * 对比 factorialIterative（循环）、factorialRecursive（普通递归）、
+ * factorialStreams（LongStream.rangeClosed + reduce）
+ * 与 factorialTailRecursive（尾递归辅助方法）的写法，
+ * 说明 Java 不支持尾调用优化（TCE），尾递归版本在深度调用时仍会栈溢出。
+ */
 public class Recursion {
 
     public static void main(String[] args) {

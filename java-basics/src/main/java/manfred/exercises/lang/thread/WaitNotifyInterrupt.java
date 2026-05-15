@@ -1,5 +1,11 @@
 package manfred.exercises.lang.thread;
 
+/**
+ * 演示 interrupt 中断处于 wait 等待状态的线程。
+ *
+ * 线程 A 进入 synchronized + obj.wait() 阻塞后，主线程调用 interrupt() 打断等待，
+ * 线程 A 捕获 InterruptedException 并退出，展示 wait 与 interrupt 的交互机制。
+ */
 public class WaitNotifyInterrupt {
     static Object obj = new Object();
     public static void main(String[] args) throws InterruptedException {

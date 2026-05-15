@@ -8,6 +8,13 @@ import java.util.Random;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Future;
 
+/**
+ * 演示使用 CompletableFuture 实现异步商品价格查询的商店服务。
+ *
+ * 展示两种异步实现方式：手动创建 CompletableFuture 并在新线程中完成，
+ * 以及使用 CompletableFuture.supplyAsync 简化异步编程，同时展示
+ * completeExceptionally 处理异步任务中的异常传播。
+ */
 public class AsyncShop {
 
     private final String name;

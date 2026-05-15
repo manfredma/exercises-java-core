@@ -4,6 +4,12 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * 演示 ReentrantLock 显式加锁与解锁的基本用法。
+ *
+ * 通过两个线程竞争同一把 ReentrantLock，展示 lock/unlock 的使用规范、
+ * try-finally 确保锁释放的编程模式，以及线程因获取不到锁而阻塞等待的行为。
+ */
 public class ReentrantLockExample {
     Lock lock = new ReentrantLock();
 

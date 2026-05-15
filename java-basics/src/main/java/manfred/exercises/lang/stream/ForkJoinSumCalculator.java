@@ -6,6 +6,13 @@ import java.util.concurrent.ForkJoinTask;
 import java.util.stream.LongStream;
 
 
+/**
+ * 演示 Fork/Join 框架对大数组求和的分治实现。
+ *
+ * 继承 RecursiveTask<Long>，当子任务长度超过阈值（10000）时递归拆分为左右两个子任务并行执行，
+ * 否则直接顺序累加，通过 ForkJoinPool.invoke 驱动并行计算，
+ * 体现分治与工作窃取算法的核心思想。
+ */
 public class ForkJoinSumCalculator extends RecursiveTask<Long> {
 
     public static final long THRESHOLD = 10_000;

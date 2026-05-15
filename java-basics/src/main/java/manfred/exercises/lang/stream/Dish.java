@@ -4,6 +4,12 @@ import java.util.*;
 
 import static java.util.Arrays.asList;
 
+/**
+ * Stream 练习中的菜肴领域模型，作为共享测试数据使用。
+ *
+ * 包含名称、是否素食、卡路里和菜类型四个字段，提供静态菜单列表 menu 和标签映射 dishTags，
+ * 供 Filtering、Grouping、Summarizing 等各 Stream 演示类直接引用。
+ */
 public class Dish {
 
     private final String name;

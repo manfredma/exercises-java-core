@@ -2,6 +2,13 @@ package manfred.exercises.lang.lambda.functional;
 
 import java.util.function.Consumer;
 
+/**
+ * 演示持久化数据结构（Persistent Data Structure）与破坏性修改的对比。
+ *
+ * append 方法创建新链表连接两段旅程，不修改原始数据（持久化方式）；
+ * link 方法直接修改链表尾部指针（破坏性方式），
+ * 通过两种方式的对比说明不可变数据结构对函数式编程的重要性。
+ */
 public class PersistentTrainJourney {
 
     public static void main(String[] args) {

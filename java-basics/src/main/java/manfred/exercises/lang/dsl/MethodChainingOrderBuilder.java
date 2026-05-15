@@ -4,6 +4,13 @@ import manfred.exercises.lang.dsl.model.Order;
 import manfred.exercises.lang.dsl.model.Stock;
 import manfred.exercises.lang.dsl.model.Trade;
 
+/**
+ * 使用方法链（Method Chaining）风格实现的订单 DSL 构建器。
+ *
+ * 每个构建步骤返回当前或下一阶段的 Builder 对象，
+ * 通过链式调用 buy().stock().on().at() 完成订单组装，
+ * 体现流式 API 的可读性优势与类型安全的分阶段构建模式。
+ */
 public class MethodChainingOrderBuilder {
 
     public final Order order = new Order();

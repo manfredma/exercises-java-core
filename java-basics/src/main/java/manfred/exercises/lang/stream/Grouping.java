@@ -7,6 +7,13 @@ import java.util.*;
 import static java.util.stream.Collectors.*;
 
 
+/**
+ * 演示 Stream Collectors.groupingBy 的多种分组用法。
+ *
+ * 涵盖按类型分组、按卡路里级别分组、多级嵌套分组、分组后计数/求和/取最大值，
+ * 以及 collectingAndThen、mapping 等下游收集器的组合应用，
+ * 全面展示 groupingBy 在数据聚合中的灵活性。
+ */
 public class Grouping {
 
     enum CaloricLevel {DIET, NORMAL, FAT}

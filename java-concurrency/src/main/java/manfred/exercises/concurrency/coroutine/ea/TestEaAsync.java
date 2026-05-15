@@ -6,6 +6,14 @@ import java.util.concurrent.ExecutionException;
 
 import static com.ea.async.Async.await;
 
+/**
+ * 演示使用 EA Async 库将 CompletableFuture 异步代码转换为同步风格写法。
+ *
+ * 对比三种实现方式：原生 CompletableFuture 链式调用（test）、
+ * EA Async 的 await 关键字简化写法（testAsync），
+ * 以及直接调用 CompletableFuture.get() 阻塞等待（testAsyncV2），
+ * 体现协程风格异步编程对代码可读性的提升。
+ */
 public class TestEaAsync {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {

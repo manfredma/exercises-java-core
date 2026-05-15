@@ -7,6 +7,14 @@ import java.util.stream.*;
 import static java.util.stream.Collectors.*;
 import static java.util.stream.Collector.Characteristics.*;
 
+/**
+ * 演示用 partitioningBy 和自定义 Collector 将整数按质数/非质数分区。
+ *
+ * partitionPrimes 使用内置 partitioningBy + isPrime 谓词；
+ * partitionPrimesWithCustomCollector 实现完整的 PrimeNumbersCollector，
+ * 自定义 supplier/accumulator/combiner/finisher/characteristics 五个方法，
+ * 演示如何从零构建高效的自定义收集器。
+ */
 public class PartitionPrimeNumbers {
 
     public static void main(String ... args) {

@@ -6,6 +6,13 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 
+/**
+ * 从磁盘读取 .class 文件字节码并定义类的自定义类加载器（meta 包专用）。
+ *
+ * 供 MetaOom 使用，通过不断创建新的 DiskClassLoader 实例并加载同一个类，
+ * 使 Metaspace 中不断累积类元数据，最终触发 OutOfMemoryError: Metaspace，
+ * 用于演示类加载器未被回收导致元空间内存泄漏的典型场景。
+ */
 public class DiskClassLoader extends ClassLoader {
 
     private String path;

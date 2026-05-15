@@ -4,6 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
 
+/**
+ * 演示工厂方法模式的传统 switch 实现与 Lambda Map 注册表两种写法。
+ *
+ * 传统方式在 createProduct 中用 switch 分支创建对象；
+ * Lambda 方式将构造器引用存入 Map，通过 createProductLambda 查表实例化，
+ * 消除 switch-case 样板代码，新增产品类型只需向 Map 注册一个条目。
+ */
 public class FactoryMain {
 
     public static void main(String[] args) {

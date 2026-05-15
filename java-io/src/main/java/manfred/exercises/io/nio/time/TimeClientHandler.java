@@ -10,7 +10,11 @@ import java.util.Iterator;
 import java.util.Set;
 
 /**
- * @author manfred on 2019/9/8.
+ * NIO 时间客户端的多路复用 I/O 处理器，演示非阻塞客户端的完整连接与通信流程。
+ *
+ * 使用 {@link java.nio.channels.Selector} 和非阻塞 {@link java.nio.channels.SocketChannel}，
+ * 演示异步连接（OP_CONNECT）、发送请求（OP_WRITE）和接收响应（OP_READ）的事件驱动处理，
+ * 包括处理连接尚未完成时的 finishConnect 场景，展示 NIO 客户端与 BIO 客户端的编程模型差异。
  */
 public class TimeClientHandler implements Runnable {
 

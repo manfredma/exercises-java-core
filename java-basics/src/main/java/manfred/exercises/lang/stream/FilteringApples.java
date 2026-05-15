@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * 演示行为参数化的演进过程：从硬编码条件到策略模式的苹果过滤。
+ *
+ * 依次展示按颜色过滤、按重量过滤、通用 filter + ApplePredicate 接口的写法，
+ * 说明将过滤行为作为参数传入方法可大幅提升代码复用性，是 Lambda 前的前置演化阶段。
+ */
 public class FilteringApples {
 
     public static void main(String... args) {

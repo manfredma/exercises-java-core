@@ -1,9 +1,12 @@
 package manfred.exercises.jvm.invoke.method;
 
 import org.junit.Test;
-
 /**
- * Created by chen on 2016/3/23.
+ * 演示 JVM 方法分派中静态分派与动态分派共同作用的典型场景。
+ *
+ * Father 和 Son 各自重载了接受 QQ 和 _360 两种参数的方法，当静态类型为 Father
+ * 但实际类型为 Son 时，参数类型在编译期静态确定而接收者在运行期动态确定，
+ * 展示了 JVM invokevirtual 指令下方法重载与方法重写的交互行为。
  */
 public class Dispatch {
     static class QQ{

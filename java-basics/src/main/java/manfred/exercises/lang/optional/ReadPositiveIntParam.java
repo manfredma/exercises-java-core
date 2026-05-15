@@ -7,6 +7,13 @@ import java.util.*;
 import static java.util.Optional.*;
 import static org.junit.Assert.assertEquals;
 
+/**
+ * 对比命令式与 Optional 函数式两种方式读取正整数属性值。
+ *
+ * readDurationImperative 用传统 if-try 嵌套处理 null 和异常，
+ * readDurationWithOptional 用 ofNullable + flatMap + filter + orElse 链式调用替代，
+ * 体现 Optional 在消除样板代码方面的优势。
+ */
 public class ReadPositiveIntParam {
 
     @Test

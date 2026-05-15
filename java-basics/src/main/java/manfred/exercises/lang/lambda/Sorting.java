@@ -3,6 +3,13 @@ package manfred.exercises.lang.lambda;
 import java.util.*;
 import static java.util.Comparator.comparing;
 
+/**
+ * 演示苹果列表排序的四种演进写法。
+ *
+ * 从传统的 Comparator 实现类，到匿名内部类，到 Lambda 表达式，
+ * 再到方法引用 Comparator.comparing(Apple::getWeight)，
+ * 直观展示 Java 8 Lambda 和方法引用在排序场景下的代码演进过程。
+ */
 public class Sorting {
 
     public static void main(String...args){
