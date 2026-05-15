@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mvn clean compile -Dsort.skip=true*)",
+      "Bash(mvn clean test -Dsort.skip=true*)",
+      "Bash(mvn clean package -Dsort.skip=true*)",
+      "Bash(mvn clean install -Dsort.skip=true*)",
+      "Bash(mvn dependency:tree*)",
+      "Bash(mvn dependency:list*)",
+      "Bash(find . -type f*)",
+      "Bash(find . -name*)",
+      "Bash(ls*)",
+      "Bash(cat*)",
+      "Bash(grep*)"
+    ]
+  }
+}
