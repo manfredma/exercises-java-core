@@ -1,77 +1,93 @@
 # exercises-java-core
 
-Java 8 核心知识练习项目，Maven 多模块管理。
+Java 8 核心知识练习项目，Maven 扁平多模块结构（所有练习模块直接挂根 POM，无嵌套聚合层）。
 
 ## 项目结构
 
 ```
-exercises-java-core/        ← 父 POM，统一依赖管理
-└── <module>/               ← 各练习子模块（按需添加）
-    ├── src/main/java/
-    └── src/test/java/
+exercises-java-core/
+├── pom.xml               ← 父 POM，统一依赖管理，<modules> 列出所有叶子模块
+├── java-basic/           ← 各练习模块（扁平，直接含 src/）
+├── java8/
+├── jvm-memory/
+└── ...
 ```
 
-- `groupId`: `manfred.exercises`
+### 模块分组
+
+| 分组 | 模块 |
+|------|------|
+| Java 基础 | `java-basic` `java-collection` `java-generic` `java-lambda` `java-thread` `java-gc` `java8` |
+| I/O | `java-io-bio` `java-io-nio` `java-io-aio` `java-io-file` |
+| 序列化 | `jdk-serialization` `java-serialization-json` `java-serialization-msgpack` `java-serialization-protobuf` `java-serialization-html` |
+| 并发 | `jdk-concurrent` `java-concurrency-lock` `multi-task` `parseq` `java-reactive-reactor` `java-reactive-rsocket` `java-reactive-rxjava1` `java-reactive-rxjava2` `quasar` `ea-async` |
+| JVM | `jvm-memory` `jvm-gc` `jvm-classloader` `jvm-proxy` `jvm-agent` `jvm-invoke` `jvm-method-invoke` `jvm-native` `jvm-off-heap` `jvm-optimize` `jvm-metaspace` |
+| 字节码 | `jvm-byte-basic` `javassist` `byte-buddy` |
+| 底层 | `asm-compiler` `asm-nasm` `computer-organization-architecture` |
+
+- `groupId`: `manfred.end`，`artifactId`: `exercises`，`version`: `1.0-SNAPSHOT`
 - Java 版本: 8
-- 测试框架: JUnit 4 + Mockito + AssertJ
 
 ## 构建命令
 
 ```bash
-# 编译
+# 编译所有模块
 mvn clean compile -Dsort.skip=true
 
 # 运行所有测试
 mvn clean test -Dsort.skip=true
 
-# 运行单个模块测试
-mvn clean test -pl <module-name> -Dsort.skip=true
+# 编译/测试单个模块
+mvn clean compile -pl java-basic -Dsort.skip=true
+mvn clean test -pl java-basic -Dsort.skip=true
 
 # 运行指定测试类
-mvn clean test -pl <module-name> -Dtest=XxxTest -Dsort.skip=true
+mvn clean test -pl java-basic -Dtest=XxxTest -Dsort.skip=true
 
 # 打包（跳过测试）
 mvn clean package -DskipTests -Dsort.skip=true
 ```
 
 > **重要**：所有 `mvn` 命令必须附加 `-Dsort.skip=true`，避免 sortpom 插件重排 pom.xml。
-> 构建相关命令（compile/test/package/install）必须加 `clean`。
+> 构建相关命令必须加 `clean`。
 
 ## 添加新子模块
 
-1. 在根目录创建子模块目录
-2. 在子模块目录创建 `pom.xml`，parent 指向根 POM
-3. 在根 `pom.xml` 的 `<modules>` 中注册新模块
-4. 按标准 Maven 目录布局创建 `src/main/java/` 和 `src/test/java/`
+使用内置命令：`/init-java-exercises <module-name> [描述]`
+
+或手动：
+1. 在根目录创建模块目录
+2. 创建 `pom.xml`，parent 指向根 POM（groupId=`manfred.end`，artifactId=`exercises`）
+3. 在根 `pom.xml` 的 `<modules>` 对应分组注释下注册
+4. 创建 `src/main/java/` 和 `src/test/java/`
+5. 创建模块级 `AGENTS.md`
 
 子模块 pom.xml 最简模板：
 ```xml
-<project>
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>manfred.exercises</groupId>
-    <artifactId>exercises-java-core</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
-  </parent>
-  <artifactId>exercises-<name></artifactId>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-    </dependency>
-  </dependencies>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>manfred.end</groupId>
+        <artifactId>exercises</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>exercises-<name></artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+    </dependencies>
 </project>
 ```
 
 ## 代码规范
 
-- 包名格式：`manfred.exercises.<module>.<topic>`
+- 包名格式：`manfred.end.<topic>` 或 `manfred.<topic>`
 - 每个练习对应一个独立的类和测试类
 - 测试类命名：`XxxTest.java`（JUnit 4 风格）
-- 方法命名：`test_<场景>_<期望结果>` 或直接描述行为的英文名
-
-## 测试规范
-
-- 每个实现类必须有对应测试类
-- 使用 AssertJ 的 `assertThat()` 风格断言（比 JUnit 原生断言更易读）
-- Mock 用 Mockito，避免在单元测试中依赖外部资源
+- 使用 AssertJ 的 `assertThat()` 断言
+- Mock 用 Mockito
