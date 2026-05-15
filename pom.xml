@@ -8,56 +8,13 @@
     <artifactId>exercises</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <!-- Java Language Basics -->
-        <module>java-basic</module>
-        <module>java-collection</module>
-        <module>java-generic</module>
-        <module>java-lambda</module>
-        <module>java-thread</module>
-        <module>java-gc</module>
-        <module>java8</module>
-        <!-- Java I/O -->
-        <module>java-io-bio</module>
-        <module>java-io-nio</module>
-        <module>java-io-aio</module>
-        <module>java-io-file</module>
-        <!-- Serialization -->
-        <module>jdk-serialization</module>
-        <module>java-serialization-json</module>
-        <module>java-serialization-msgpack</module>
-        <module>java-serialization-protobuf</module>
-        <module>java-serialization-html</module>
-        <!-- Concurrency -->
-        <module>jdk-concurrent</module>
-        <module>java-concurrency-lock</module>
-        <module>multi-task</module>
-        <module>parseq</module>
-        <module>java-reactive-reactor</module>
-        <module>java-reactive-rsocket</module>
-        <module>java-reactive-rxjava1</module>
-        <module>java-reactive-rxjava2</module>
-        <module>quasar</module>
-        <module>ea-async</module>
-        <!-- JVM -->
-        <module>jvm-memory</module>
-        <module>jvm-gc</module>
-        <module>jvm-classloader</module>
-        <module>jvm-proxy</module>
-        <module>jvm-agent</module>
-        <module>jvm-invoke</module>
-        <module>jvm-method-invoke</module>
-        <module>jvm-native</module>
-        <module>jvm-off-heap</module>
-        <module>jvm-optimize</module>
-        <module>jvm-metaspace</module>
-        <!-- Bytecode -->
-        <module>jvm-byte-basic</module>
-        <module>javassist</module>
-        <module>byte-buddy</module>
-        <!-- Low Level -->
-        <module>asm-compiler</module>
-        <module>asm-nasm</module>
+        <module>java-language</module>
+        <module>jvm</module>
+        <module>coroutine</module>
+        <module>asm</module>
         <module>computer-organization-architecture</module>
+        <module>concurrent</module>
+        <module>net</module>
     </modules>
     <packaging>pom</packaging>
 
