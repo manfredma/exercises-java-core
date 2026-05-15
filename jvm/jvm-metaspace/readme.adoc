@@ -1,4 +1,0 @@
-
-
-https://www.javadoop.com/post/metaspace[深入理解堆外内存 Metaspace]
-https://stuefe.de/posts/metaspace/what-is-metaspace/[What is Metaspace?]

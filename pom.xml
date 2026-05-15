@@ -8,12 +8,12 @@
     <artifactId>exercises</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>java-language</module>
-        <module>jvm</module>
-        <module>coroutine</module>
-        <module>asm</module>
-        <module>computer-organization-architecture</module>
-        <module>concurrent</module>
+        <module>java-basics</module>
+        <module>java-io</module>
+        <module>java-serialization</module>
+        <module>java-concurrency</module>
+        <module>jvm-all</module>
+        <module>low-level</module>
         <module>net</module>
     </modules>
     <packaging>pom</packaging>
