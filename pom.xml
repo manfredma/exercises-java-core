@@ -14,7 +14,7 @@
         <module>java-concurrency</module>
         <module>jvm-all</module>
         <module>low-level</module>
-        <module>net</module>
+        <module>java-net</module>
     </modules>
     <packaging>pom</packaging>
 
