@@ -36,4 +36,10 @@ public class OptionalMain {
                 })
                 .collect(toSet());
     }
+
+    public static void main(String[] args) {
+        OptionalMain demo = new OptionalMain();
+        System.out.println(demo.getCarInsuranceName(java.util.Optional.empty()));
+    }
+
 }

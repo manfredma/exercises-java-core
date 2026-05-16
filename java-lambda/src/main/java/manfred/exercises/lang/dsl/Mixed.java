@@ -26,4 +26,9 @@ public class Mixed {
                                          .at( 125.00 )) );
 
     }
+
+    public static void main(String[] args) {
+        new Mixed().mixed();
+    }
+
 }
