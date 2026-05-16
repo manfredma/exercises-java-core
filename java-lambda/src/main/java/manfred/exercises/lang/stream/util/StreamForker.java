@@ -1,4 +1,4 @@
-package manfred.exercises.lang.stream;
+package manfred.exercises.lang.stream.util;
 
 import java.util.ArrayList;
 import java.util.HashMap;

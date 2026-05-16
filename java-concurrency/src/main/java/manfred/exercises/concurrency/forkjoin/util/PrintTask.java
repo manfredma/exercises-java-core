@@ -1,4 +1,6 @@
-package manfred.exercises.concurrency.forkjoin;
+package manfred.exercises.concurrency.forkjoin.util;
+
+import manfred.exercises.concurrency.forkjoin.util.PrintTask;
 
 import java.util.concurrent.RecursiveAction;
 

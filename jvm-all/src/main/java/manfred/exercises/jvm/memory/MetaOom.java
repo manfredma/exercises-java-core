@@ -1,5 +1,6 @@
 package manfred.exercises.jvm.memory;
 
+import manfred.exercises.jvm.memory.model.SampleDataObject;
 import manfred.exercises.jvm.classloader.MetaDiskClassLoader;
 import java.util.ArrayList;
 import java.util.List;

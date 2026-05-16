@@ -1,5 +1,6 @@
 package manfred.exercises.lang.dsl;
 
+import manfred.exercises.lang.lambda.model.Lambda;
 import static manfred.exercises.lang.dsl.MethodChainingOrderBuilder.forCustomer;
 import static manfred.exercises.lang.dsl.NestedFunctionOrderBuilder.at;
 import static manfred.exercises.lang.dsl.NestedFunctionOrderBuilder.buy;

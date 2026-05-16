@@ -1,4 +1,6 @@
-package manfred.exercises.lang.generic;
+package manfred.exercises.lang.generic.model;
+
+import manfred.exercises.lang.generic.Generator;
 
 /**
  * 泛型接口 Generator 的具体类型实现示例。

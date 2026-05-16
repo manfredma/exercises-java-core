@@ -1,4 +1,4 @@
-package manfred.exercises.lang.lambda;
+package manfred.exercises.lang.lambda.model;
 
 import java.util.function.Function;
 

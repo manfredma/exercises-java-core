@@ -1,5 +1,6 @@
 package manfred.exercises.jvm.agent;
 
+import manfred.exercises.jvm.memory.model.SampleDataObject;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 

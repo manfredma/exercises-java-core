@@ -1,5 +1,6 @@
 package manfred.exercises.lang.dsl;
 
+import manfred.exercises.lang.lambda.model.Lambda;
 import manfred.exercises.lang.dsl.model.Order;
 import manfred.exercises.lang.dsl.model.Stock;
 import manfred.exercises.lang.dsl.model.Trade;

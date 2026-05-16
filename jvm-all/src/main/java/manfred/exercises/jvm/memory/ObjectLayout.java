@@ -1,5 +1,6 @@
 package manfred.exercises.jvm.memory;
 
+import manfred.exercises.jvm.memory.model.SampleDataObject;
 import static java.lang.System.out;
 import org.openjdk.jol.info.ClassLayout;
 import org.openjdk.jol.info.GraphLayout;

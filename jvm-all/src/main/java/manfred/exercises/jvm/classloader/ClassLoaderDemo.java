@@ -1,5 +1,6 @@
 package manfred.exercises.jvm.classloader;
 
+import manfred.exercises.jvm.memory.model.SampleDataObject;
 import java.lang.reflect.Method;
 
 /**

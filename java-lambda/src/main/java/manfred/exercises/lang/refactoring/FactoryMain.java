@@ -1,5 +1,6 @@
 package manfred.exercises.lang.refactoring;
 
+import manfred.exercises.lang.lambda.model.Lambda;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;

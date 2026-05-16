@@ -1,5 +1,6 @@
 package manfred.exercises.lang.stream;
 
+import manfred.exercises.lang.lambda.model.Lambda;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

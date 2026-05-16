@@ -1,5 +1,8 @@
 package manfred.exercises.lang.basic;
 
+import manfred.exercises.lang.basic.model.Child;
+import manfred.exercises.lang.basic.model.Parent;
+
 /**
  * 演示 Java 字段隐藏（field hiding）行为。
  *

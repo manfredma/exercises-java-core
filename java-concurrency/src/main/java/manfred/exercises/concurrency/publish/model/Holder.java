@@ -1,4 +1,4 @@
-package manfred.exercises.concurrency.publish;
+package manfred.exercises.concurrency.publish.model;
 
 /**
  * 演示不安全发布场景中的值持有对象。

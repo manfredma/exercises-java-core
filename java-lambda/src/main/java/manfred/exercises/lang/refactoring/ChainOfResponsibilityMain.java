@@ -1,5 +1,6 @@
 package manfred.exercises.lang.refactoring;
 
+import manfred.exercises.lang.lambda.model.Lambda;
 import java.util.function.Function;
 import java.util.function.UnaryOperator;
 

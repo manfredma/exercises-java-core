@@ -1,4 +1,4 @@
-package manfred.exercises.concurrency.completablefuture;
+package manfred.exercises.concurrency.completablefuture.util;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;

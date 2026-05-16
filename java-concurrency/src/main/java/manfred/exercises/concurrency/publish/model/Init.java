@@ -1,4 +1,4 @@
-package manfred.exercises.concurrency.publish;
+package manfred.exercises.concurrency.publish.model;
 
 /**
  * 演示对象引用的不安全发布容器类。

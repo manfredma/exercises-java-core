@@ -1,5 +1,6 @@
 package manfred.exercises.concurrency.forkjoin;
 
+import manfred.exercises.concurrency.forkjoin.util.PrintTask;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ForkJoinTask;
 import java.util.concurrent.TimeUnit;

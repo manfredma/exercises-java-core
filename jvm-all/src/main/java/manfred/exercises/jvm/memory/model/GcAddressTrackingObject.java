@@ -1,4 +1,4 @@
-package manfred.exercises.jvm.memory;
+package manfred.exercises.jvm.memory.model;
 
 /**
  * 用于演示 JVM 对象内存地址观察的简单数据类。

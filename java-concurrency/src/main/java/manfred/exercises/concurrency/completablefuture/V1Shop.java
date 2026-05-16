@@ -1,6 +1,7 @@
 package manfred.exercises.concurrency.completablefuture;
 
-import static manfred.exercises.concurrency.completablefuture.Util.*;
+import manfred.exercises.concurrency.completablefuture.util.Util;
+import static manfred.exercises.concurrency.completablefuture.util.Util.*;
 
 import java.util.Random;
 import java.util.concurrent.CompletableFuture;

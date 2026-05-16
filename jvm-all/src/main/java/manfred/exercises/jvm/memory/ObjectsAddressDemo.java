@@ -1,5 +1,6 @@
 package manfred.exercises.jvm.memory;
 
+import manfred.exercises.jvm.memory.model.GcAddressTrackingObject;
 import org.openjdk.jol.info.GraphLayout;
 import org.openjdk.jol.vm.VM;
 import sun.misc.Unsafe;

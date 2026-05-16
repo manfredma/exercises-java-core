@@ -1,5 +1,6 @@
-package manfred.exercises.lang.lambda;
+package manfred.exercises.lang.lambda.model;
 
+import manfred.exercises.lang.lambda.model.Lambda;
 import java.util.function.Function;
 
 /**

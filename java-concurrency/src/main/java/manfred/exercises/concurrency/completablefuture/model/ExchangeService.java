@@ -1,6 +1,7 @@
 package manfred.exercises.concurrency.completablefuture.model;
 
-import static manfred.exercises.concurrency.completablefuture.Util.delay;
+import manfred.exercises.concurrency.completablefuture.util.Util;
+import static manfred.exercises.concurrency.completablefuture.util.Util.delay;
 
 /**
  * 模拟带网络延迟的货币汇率查询服务。

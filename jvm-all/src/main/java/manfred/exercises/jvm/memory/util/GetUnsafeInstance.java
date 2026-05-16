@@ -1,4 +1,4 @@
-package manfred.exercises.jvm.memory;
+package manfred.exercises.jvm.memory.util;
 
 import sun.misc.Unsafe;
 

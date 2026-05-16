@@ -1,5 +1,6 @@
 package manfred.exercises.lang.lambda;
 
+import manfred.exercises.lang.lambda.model.Lambda;
 import java.util.*;
 import static java.util.Comparator.comparing;
 

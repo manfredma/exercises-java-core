@@ -1,5 +1,6 @@
 package manfred.exercises.jvm.memory;
 
+import manfred.exercises.jvm.memory.util.GetUnsafeInstance;
 import sun.misc.Unsafe;
 
 import java.util.concurrent.TimeUnit;

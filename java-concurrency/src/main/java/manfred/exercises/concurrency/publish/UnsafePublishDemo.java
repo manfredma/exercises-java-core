@@ -1,5 +1,8 @@
 package manfred.exercises.concurrency.publish;
 
+import manfred.exercises.concurrency.publish.model.Holder;
+import manfred.exercises.concurrency.publish.model.Init;
+
 /**
  * 演示对象不安全发布导致的构造函数逸出问题。
  *
