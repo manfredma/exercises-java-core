@@ -50,11 +50,6 @@
     <!-- 全局依赖：所有模块均需要 -->
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit4.version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.openjdk.jmh</groupId>
             <artifactId>jmh-core</artifactId>
             <version>${jmh.version}</version>
@@ -69,6 +64,12 @@
     <!-- 版本管理：子模块按需引用，无需写版本号 -->
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit4.version}</version>
+                <scope>test</scope>
+            </dependency>
             <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-core</artifactId>
