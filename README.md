@@ -1,4 +1,4 @@
-# exercises-java-core
+    # exercises-java-core
 
 Java 8 核心知识练习项目，Maven 多模块结构。每个模块聚焦一个知识域，包内按职责分层（Demo 类在根包，模型类在 `.model`，辅助类在 `.util`/`.impl`/`.handler` 等子包）。
 
