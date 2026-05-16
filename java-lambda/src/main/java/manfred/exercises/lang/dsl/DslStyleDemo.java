@@ -92,7 +92,6 @@ public class DslStyleDemo {
         } );
     }
 
-
     public static void main(String[] args) {
         DslStyleDemo demo = new DslStyleDemo();
         demo.plain();

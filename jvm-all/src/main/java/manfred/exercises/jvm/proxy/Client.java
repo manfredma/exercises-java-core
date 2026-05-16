@@ -1,5 +1,7 @@
 package manfred.exercises.jvm.proxy;
 
+import manfred.exercises.jvm.proxy.impl.FunctionImpl;
+import manfred.exercises.jvm.proxy.impl.FunctionHandler;
 import java.lang.reflect.Proxy;
 /**
  * JDK 动态代理演示的客户端入口类。

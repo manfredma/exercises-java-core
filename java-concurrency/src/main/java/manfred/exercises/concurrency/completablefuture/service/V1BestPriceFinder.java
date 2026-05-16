@@ -1,4 +1,4 @@
-package manfred.exercises.concurrency.completablefuture;
+package manfred.exercises.concurrency.completablefuture.service;
 
 import java.util.ArrayList;
 import java.util.Arrays;

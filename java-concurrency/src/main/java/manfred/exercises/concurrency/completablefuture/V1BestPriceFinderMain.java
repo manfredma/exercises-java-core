@@ -1,5 +1,7 @@
 package manfred.exercises.concurrency.completablefuture;
 
+import manfred.exercises.concurrency.completablefuture.service.V1BestPriceFinder;
+import manfred.exercises.concurrency.completablefuture.service.BestPriceFinder;
 import java.util.List;
 import java.util.function.Supplier;
 

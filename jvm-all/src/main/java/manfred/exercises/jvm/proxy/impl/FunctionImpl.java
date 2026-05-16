@@ -1,4 +1,6 @@
-package manfred.exercises.jvm.proxy;
+package manfred.exercises.jvm.proxy.impl;
+
+import manfred.exercises.jvm.proxy.IFunction;
 /**
  * IFunction 接口的真实实现类，用于 JDK 动态代理演示。
  *

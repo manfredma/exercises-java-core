@@ -1,4 +1,6 @@
-package manfred.exercises.jvm.proxy;
+package manfred.exercises.jvm.proxy.impl;
+
+import manfred.exercises.jvm.proxy.IFunction;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

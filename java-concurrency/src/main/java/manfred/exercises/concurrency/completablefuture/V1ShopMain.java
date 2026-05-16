@@ -1,5 +1,6 @@
 package manfred.exercises.concurrency.completablefuture;
 
+import manfred.exercises.concurrency.completablefuture.service.V1Shop;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 

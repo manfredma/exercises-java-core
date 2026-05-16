@@ -1,4 +1,4 @@
-package manfred.exercises.concurrency.completablefuture;
+package manfred.exercises.concurrency.completablefuture.service;
 
 import manfred.exercises.concurrency.completablefuture.util.Util;
 import static manfred.exercises.concurrency.completablefuture.util.Util.*;
