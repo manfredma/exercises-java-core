@@ -44,6 +44,7 @@
         <jol.version>0.9</jol.version>
         <byte-buddy.version>1.11.0</byte-buddy.version>
         <javassist.version>3.28.0-GA</javassist.version>
+        <json-schema-validator.version>2.2.6</json-schema-validator.version>
     </properties>
 
     <!-- 全局依赖：所有模块均需要 -->
@@ -117,7 +118,7 @@
             <dependency>
                 <groupId>com.github.fge</groupId>
                 <artifactId>json-schema-validator</artifactId>
-                <version>2.2.6</version>
+                <version>${json-schema-validator.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.jsoup</groupId>
