@@ -1,150 +1,132 @@
 # exercises-java-core
 
-Java 8 核心知识练习项目，采用 Maven 扁平多模块结构组织。每个模块聚焦一个独立知识点，可单独编译和测试。
+Java 8 核心知识练习项目，Maven 多模块结构。每个模块聚焦一个知识域，包内按职责分层（Demo 类在根包，模型类在 `.model`，辅助类在 `.util`/`.impl`/`.handler` 等子包）。
 
 [English](README_EN.md)
 
 ## 模块总览
 
-### Java 语言基础
+### java-basics — Java 语言基础语法
 
-| 模块 | 内容 |
-|------|------|
-| `java-basic` | 基础语法、数据类型、字符串、异常、反射等 |
-| `java-collection` | 集合框架（List/Map/Set）使用与原理 |
-| `java-generic` | 泛型机制、类型擦除、通配符 |
-| `java-lambda` | Lambda 表达式基础 |
-| `java-thread` | Thread 基础、ThreadLocal、线程生命周期 |
-| `java-gc` | GC 触发与回收行为观察 |
-| `java8` | Java 8 新特性：Stream、Optional、函数式接口等（含《Java 8 in Action》练习） |
+| 包 | 内容 |
+|---|---|
+| `lang.basic` | 基础语法、运算符、枚举、字符串处理、类初始化顺序 |
+| `lang.string` | 字符串 API、intern 机制、编码 |
+| `lang.collection` | 集合框架（List/Map/Set）使用与原理 |
+| `lang.generic` | 泛型机制、类型擦除、边界约束、通配符 |
+| `lang.datetime` | 日期时间 API（LocalDate/DateTimeFormatter/Instant） |
+| `lang.defaultmethod` | 接口默认方法、多继承冲突解析 |
 
-### Java I/O
+### java-lambda — Lambda 与函数式编程
 
-| 模块 | 内容 |
-|------|------|
-| `java-io-bio` | 传统阻塞 IO（BIO） |
-| `java-io-nio` | 非阻塞 IO、Channel、Buffer、Selector |
-| `java-io-aio` | 异步 IO（AIO） |
-| `java-io-file` | 文件操作、Path、Files |
+| 包 | 内容 |
+|---|---|
+| `lang.lambda` | Lambda 表达式、函数式接口、ExecuteAround 模式 |
+| `lang.functional` | 函数式编程：柯里化、惰性求值、递归、持久化数据结构 |
+| `lang.stream` | Stream API：过滤/映射/规约/收集/分组/分区 |
+| `lang.optional` | Optional 链式调用、flatMap 组合 |
+| `lang.refactoring` | 用 Lambda 重构设计模式：策略/观察者/工厂/模板方法 |
+| `lang.dsl` | DSL 构建风格：方法链/嵌套函数/Lambda/混合 |
 
-### 序列化
+### java-io — I/O 编程
 
-| 模块 | 内容 |
-|------|------|
-| `jdk-serialization` | JDK 原生序列化 |
-| `java-serialization-json` | JSON 序列化：Jackson、Gson、Fastjson、JSON Schema |
-| `java-serialization-msgpack` | MessagePack 二进制序列化 |
-| `java-serialization-protobuf` | Protocol Buffers |
-| `java-serialization-html` | HTML 解析（Jsoup） |
+| 包 | 内容 |
+|---|---|
+| `io.bio` | BIO 阻塞 IO（一对一、伪异步线程池模型） |
+| `io.nio` | NIO 非阻塞 IO（Channel/Buffer/Selector/Reactor） |
+| `io.aio` | AIO 异步 IO（CompletionHandler 回调链） |
+| `io.file` | 文件操作（Path/Files/属性） |
 
-### 并发
+### java-serialization — 序列化
 
-| 模块 | 内容 |
-|------|------|
-| `jdk-concurrent` | JUC 核心：Lock、AQS、原子类、线程池、CompletableFuture |
-| `java-concurrency-lock` | 锁机制深入：ReentrantLock、Condition |
-| `multi-task` | 多任务并行编排框架（TTL、Spring） |
-| `parseq` | LinkedIn ParSeq 异步任务编排 |
-| `java-reactive-reactor` | Project Reactor 响应式编程 |
-| `java-reactive-rsocket` | RSocket 响应式通信协议 |
-| `java-reactive-rxjava1` | RxJava 1.x |
-| `java-reactive-rxjava2` | RxJava 2.x |
-| `quasar` | Quasar 协程（Java 协程库） |
-| `ea-async` | EA Async 异步转同步语法糖 |
+| 包 | 内容 |
+|---|---|
+| `serialization.jdk` | JDK 原生序列化（Serializable/ObjectStream） |
+| `serialization.json` | JSON：Jackson/Gson/Fastjson/JSON Schema |
+| `serialization.messagepack` | MessagePack 二进制序列化 |
+| `serialization.protobuf` | Protocol Buffers（.proto → 生成代码） |
+| `serialization.html` | HTML 解析（Jsoup） |
 
-### JVM
+### java-concurrency — 并发编程
 
-| 模块 | 内容 |
-|------|------|
-| `jvm-memory` | 内存结构：堆、栈、方法区、直接内存、JOL 对象布局 |
-| `jvm-gc` | GC 算法与调优 |
-| `jvm-classloader` | 类加载机制、双亲委派、自定义 ClassLoader |
-| `jvm-proxy` | JDK 动态代理 |
-| `jvm-agent` | Java Agent（Premain/Agentmain） |
-| `jvm-invoke` | 方法调用：反射、MethodHandle、invokedynamic |
-| `jvm-method-invoke` | 方法调用字节码指令深入 |
-| `jvm-native` | JNI 本地方法调用 |
-| `jvm-off-heap` | 堆外内存：DirectByteBuffer、Unsafe |
-| `jvm-optimize` | JVM 优化：逃逸分析、伪共享、缓存行、内联 |
-| `jvm-metaspace` | Metaspace 原理与观察 |
+| 包 | 内容 |
+|---|---|
+| `concurrency.thread` | Thread 基础、ThreadLocal、线程生命周期 |
+| `concurrency.lock` | ReentrantLock、Condition、AQS 自定义锁 |
+| `concurrency.atomic` | 原子类、CAS、线程安全边界 |
+| `concurrency.forkjoin` | Fork/Join 框架、RecursiveTask/Action |
+| `concurrency.parallel` | 并行流性能对比（JMH 基准测试） |
+| `concurrency.completablefuture` | CompletableFuture 异步编排、多 Shop 价格聚合 |
+| `concurrency.future` | Future 基础用法 |
+| `concurrency.publish` | 不安全发布、构造函数逸出 |
+| `concurrency.collection` | 并发集合（ConcurrentHashMap 等） |
+| `concurrency.coroutine` | 协程（Quasar Fiber、EA Async） |
 
-### 字节码操作
+### jvm-all — JVM 内部原理
 
-| 模块 | 内容 |
-|------|------|
-| `jvm-byte-basic` | 字节码基础、class 文件结构 |
-| `javassist` | Javassist 字节码操作库 |
-| `byte-buddy` | Byte Buddy 字节码生成与增强 |
+| 包 | 内容 |
+|---|---|
+| `jvm.memory` | 堆/栈/方法区/直接内存 OOM、对象布局（JOL）、Unsafe |
+| `jvm.gc` | GC 触发条件、分配失败、System.gc 行为 |
+| `jvm.classloader` | 类加载机制、双亲委派、自定义 ClassLoader、热重载 |
+| `jvm.proxy` | JDK 动态代理 |
+| `jvm.agent` | Java Agent（Premain/字节码转换） |
+| `jvm.invoke` | 方法调用：反射/MethodHandle/invokedynamic/静态分派/动态分派 |
+| `jvm.bytecode` | 字节码操作：ASM/Byte Buddy/Javassist |
+| `jvm.optimize` | JIT 优化：逃逸分析/伪共享/缓存行/指令重排/内联 |
+| `jvm.jni` | JNI 本地方法调用 |
 
-### 底层原理
+### low-level — 底层原理
 
-| 模块 | 内容 |
-|------|------|
-| `asm-compiler` | 手写简易编译器（词法分析、语法分析、AST） |
-| `asm-nasm` | NASM 汇编语言练习 |
-| `computer-organization-architecture` | 计算机组成原理 |
+| 包 | 内容 |
+|---|---|
+| `lowlevel.compiler` | 手写简易编译器（词法分析→语法分析→AST→解释执行） |
+| `lowlevel.computer` | 计算机组成原理 |
+
+### java-net — 网络编程
+
+| 包 | 内容 |
+|---|---|
+| `net` | Java 网络编程基础（Socket/URL） |
+
+---
+
+## 包内分层规范
+
+每个知识域包内按职责分三层：
+
+```
+concurrency.completablefuture/        ← Demo 类（有 main 方法的演示入口）
+concurrency.completablefuture.model/  ← 模型/数据类（POJO，演示用的数据载体）
+concurrency.completablefuture.service/← 服务/实现类（无 main，被 Demo 调用）
+concurrency.completablefuture.util/   ← 工具类（工具方法，如 Util.delay()）
+```
+
+---
 
 ## 快速开始
 
-### 环境要求
-
-- JDK 8+
-- Maven 3.6+
-
-### 编译
+**环境要求：** JDK 8+、Maven 3.6+
 
 ```bash
 # 编译所有模块
-mvn clean compile -Dsort.skip=true
+mvn clean compile
 
-# 编译指定模块
-mvn clean compile -pl java-basic -Dsort.skip=true
-```
-
-### 测试
-
-```bash
 # 运行所有测试
-mvn clean test -Dsort.skip=true
+mvn clean test
 
-# 运行指定模块测试
-mvn clean test -pl java-basic -Dsort.skip=true
+# 编译/测试单个模块
+mvn clean compile -pl java-basics
+mvn clean test -pl java-basics
 
 # 运行指定测试类
-mvn clean test -pl java-basic -Dtest=XxxTest -Dsort.skip=true
+mvn clean test -pl java-basics -Dtest=XxxTest
 ```
 
 ## 添加新模块
-
-使用内置命令快速初始化：
 
 ```
 /init-java-exercises <module-name> [描述]
 ```
 
-或手动创建：
-
-1. 在根目录创建模块目录及标准 Maven 目录结构
-2. 创建 `pom.xml`，parent 指向根 POM
-3. 在根 `pom.xml` 的 `<modules>` 中注册
-
 详见 [CLAUDE.md](CLAUDE.md)。
-
-## 项目结构
-
-```
-exercises-java-core/
-├── pom.xml                    # 父 POM（依赖统一管理）
-├── CLAUDE.md                  # AI Coding 规范
-├── AGENTS.md                  # AI 导航文档
-├── java-basic/                # 各练习模块（扁平结构）
-├── java8/
-├── jvm-memory/
-└── ...
-```
-
-## 技术栈
-
-- Java 8
-- Maven 3.x（多模块）
-- JUnit 4 + Mockito + AssertJ

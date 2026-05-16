@@ -1,150 +1,132 @@
 # exercises-java-core
 
-Java 8 core knowledge exercises organized as a flat Maven multi-module project. Each module focuses on a single topic and can be compiled and tested independently.
+Java 8 core knowledge exercises organized as a Maven multi-module project. Each module covers one knowledge domain, with packages layered by responsibility (Demo classes at root, model classes in `.model`, helpers in `.util`/`.impl`/`.handler` subpackages).
 
 [中文](README.md)
 
 ## Module Overview
 
-### Java Language Basics
+### java-basics — Java Language Syntax
 
-| Module | Content |
-|--------|---------|
-| `java-basic` | Syntax, data types, strings, exceptions, reflection |
-| `java-collection` | Collection framework (List/Map/Set) usage and internals |
-| `java-generic` | Generics, type erasure, wildcards |
-| `java-lambda` | Lambda expression fundamentals |
-| `java-thread` | Thread basics, ThreadLocal, thread lifecycle |
-| `java-gc` | GC triggering and reclamation behavior |
-| `java8` | Java 8 features: Stream, Optional, functional interfaces (includes *Java 8 in Action* exercises) |
+| Package | Content |
+|---|---|
+| `lang.basic` | Syntax, operators, enums, string traps, class init order |
+| `lang.string` | String API, intern mechanism, encoding |
+| `lang.collection` | Collection framework (List/Map/Set) |
+| `lang.generic` | Generics, type erasure, bounds, wildcards |
+| `lang.datetime` | Date/time API (LocalDate/DateTimeFormatter/Instant) |
+| `lang.defaultmethod` | Interface default methods, multi-inheritance conflict resolution |
 
-### Java I/O
+### java-lambda — Lambda & Functional Programming
 
-| Module | Content |
-|--------|---------|
-| `java-io-bio` | Traditional blocking I/O (BIO) |
-| `java-io-nio` | Non-blocking I/O, Channel, Buffer, Selector |
-| `java-io-aio` | Asynchronous I/O (AIO) |
-| `java-io-file` | File operations, Path, Files API |
+| Package | Content |
+|---|---|
+| `lang.lambda` | Lambda expressions, functional interfaces, ExecuteAround pattern |
+| `lang.functional` | Functional programming: currying, lazy evaluation, recursion, persistent structures |
+| `lang.stream` | Stream API: filter/map/reduce/collect/group/partition |
+| `lang.optional` | Optional chaining, flatMap composition |
+| `lang.refactoring` | Refactoring design patterns with Lambda: strategy/observer/factory/template method |
+| `lang.dsl` | DSL building styles: method chaining/nested functions/Lambda/mixed |
 
-### Serialization
+### java-io — I/O Programming
 
-| Module | Content |
-|--------|---------|
-| `jdk-serialization` | JDK native serialization |
-| `java-serialization-json` | JSON: Jackson, Gson, Fastjson, JSON Schema |
-| `java-serialization-msgpack` | MessagePack binary serialization |
-| `java-serialization-protobuf` | Protocol Buffers |
-| `java-serialization-html` | HTML parsing with Jsoup |
+| Package | Content |
+|---|---|
+| `io.bio` | BIO blocking IO (one-to-one, pseudo-async thread pool) |
+| `io.nio` | NIO non-blocking IO (Channel/Buffer/Selector/Reactor) |
+| `io.aio` | AIO async IO (CompletionHandler callback chain) |
+| `io.file` | File operations (Path/Files/attributes) |
 
-### Concurrency
+### java-serialization — Serialization
 
-| Module | Content |
-|--------|---------|
-| `jdk-concurrent` | JUC core: Lock, AQS, atomics, thread pools, CompletableFuture |
-| `java-concurrency-lock` | Deep dive into ReentrantLock, Condition |
-| `multi-task` | Parallel task orchestration (TTL, Spring) |
-| `parseq` | LinkedIn ParSeq async task composition |
-| `java-reactive-reactor` | Project Reactor reactive programming |
-| `java-reactive-rsocket` | RSocket reactive communication protocol |
-| `java-reactive-rxjava1` | RxJava 1.x |
-| `java-reactive-rxjava2` | RxJava 2.x |
-| `quasar` | Quasar coroutines for Java |
-| `ea-async` | EA Async — async/await syntax sugar for Java |
+| Package | Content |
+|---|---|
+| `serialization.jdk` | JDK native serialization (Serializable/ObjectStream) |
+| `serialization.json` | JSON: Jackson/Gson/Fastjson/JSON Schema |
+| `serialization.messagepack` | MessagePack binary serialization |
+| `serialization.protobuf` | Protocol Buffers (.proto → generated code) |
+| `serialization.html` | HTML parsing (Jsoup) |
 
-### JVM
+### java-concurrency — Concurrent Programming
 
-| Module | Content |
-|--------|---------|
-| `jvm-memory` | Memory layout: heap, stack, metaspace, off-heap, JOL object layout |
-| `jvm-gc` | GC algorithms and tuning |
-| `jvm-classloader` | Class loading, parent delegation, custom ClassLoader |
-| `jvm-proxy` | JDK dynamic proxy |
-| `jvm-agent` | Java Agent (Premain / Agentmain) |
-| `jvm-invoke` | Method invocation: reflection, MethodHandle, invokedynamic |
-| `jvm-method-invoke` | Bytecode-level method invocation deep dive |
-| `jvm-native` | JNI native method calls |
-| `jvm-off-heap` | Off-heap memory: DirectByteBuffer, Unsafe |
-| `jvm-optimize` | JVM optimizations: escape analysis, false sharing, cache lines, inlining |
-| `jvm-metaspace` | Metaspace internals |
+| Package | Content |
+|---|---|
+| `concurrency.thread` | Thread basics, ThreadLocal, thread lifecycle |
+| `concurrency.lock` | ReentrantLock, Condition, AQS custom lock |
+| `concurrency.atomic` | Atomic classes, CAS, thread-safe bounds |
+| `concurrency.forkjoin` | Fork/Join framework, RecursiveTask/Action |
+| `concurrency.parallel` | Parallel stream performance benchmarks (JMH) |
+| `concurrency.completablefuture` | CompletableFuture async orchestration, multi-shop price aggregation |
+| `concurrency.future` | Future basics |
+| `concurrency.publish` | Unsafe publication, constructor escape |
+| `concurrency.collection` | Concurrent collections |
+| `concurrency.coroutine` | Coroutines (Quasar Fiber, EA Async) |
 
-### Bytecode Manipulation
+### jvm-all — JVM Internals
 
-| Module | Content |
-|--------|---------|
-| `jvm-byte-basic` | Bytecode basics, .class file structure |
-| `javassist` | Bytecode manipulation with Javassist |
-| `byte-buddy` | Bytecode generation and enhancement with Byte Buddy |
+| Package | Content |
+|---|---|
+| `jvm.memory` | Heap/stack/metaspace/off-heap OOM, object layout (JOL), Unsafe |
+| `jvm.gc` | GC triggers, allocation failure, System.gc behavior |
+| `jvm.classloader` | Class loading, parent delegation, custom ClassLoader, hot reload |
+| `jvm.proxy` | JDK dynamic proxy |
+| `jvm.agent` | Java Agent (Premain / bytecode transformation) |
+| `jvm.invoke` | Method invocation: reflection/MethodHandle/invokedynamic/static & dynamic dispatch |
+| `jvm.bytecode` | Bytecode manipulation: ASM / Byte Buddy / Javassist |
+| `jvm.optimize` | JIT optimizations: escape analysis/false sharing/cache lines/instruction reordering/inlining |
+| `jvm.jni` | JNI native method calls |
 
-### Low Level
+### low-level — Low-level Internals
 
-| Module | Content |
-|--------|---------|
-| `asm-compiler` | Hand-written mini compiler (lexer, parser, AST) |
-| `asm-nasm` | NASM assembly language exercises |
-| `computer-organization-architecture` | Computer organization and architecture |
+| Package | Content |
+|---|---|
+| `lowlevel.compiler` | Hand-written mini compiler (lexer → parser → AST → interpreter) |
+| `lowlevel.computer` | Computer organization and architecture |
+
+### java-net — Network Programming
+
+| Package | Content |
+|---|---|
+| `net` | Java networking basics (Socket/URL) |
+
+---
+
+## Package Layering Convention
+
+Each domain package is layered by responsibility:
+
+```
+concurrency.completablefuture/         ← Demo classes (with main() entry point)
+concurrency.completablefuture.model/   ← Model/data classes (POJOs, demo data)
+concurrency.completablefuture.service/ ← Service/impl classes (no main, called by Demo)
+concurrency.completablefuture.util/    ← Utility classes (helper methods)
+```
+
+---
 
 ## Getting Started
 
-### Requirements
-
-- JDK 8+
-- Maven 3.6+
-
-### Build
+**Requirements:** JDK 8+, Maven 3.6+
 
 ```bash
 # Build all modules
-mvn clean compile -Dsort.skip=true
+mvn clean compile
 
-# Build a specific module
-mvn clean compile -pl java-basic -Dsort.skip=true
-```
-
-### Test
-
-```bash
 # Run all tests
-mvn clean test -Dsort.skip=true
+mvn clean test
 
-# Run tests for a specific module
-mvn clean test -pl java-basic -Dsort.skip=true
+# Build/test a specific module
+mvn clean compile -pl java-basics
+mvn clean test -pl java-basics
 
 # Run a specific test class
-mvn clean test -pl java-basic -Dtest=XxxTest -Dsort.skip=true
+mvn clean test -pl java-basics -Dtest=XxxTest
 ```
 
 ## Adding a New Module
-
-Use the built-in command:
 
 ```
 /init-java-exercises <module-name> [description]
 ```
 
-Or manually:
-
-1. Create the module directory with standard Maven layout
-2. Create `pom.xml` with parent pointing to the root POM
-3. Register the module in the root `pom.xml` `<modules>` section
-
 See [CLAUDE.md](CLAUDE.md) for details.
-
-## Project Layout
-
-```
-exercises-java-core/
-├── pom.xml                    # Parent POM (centralized dependency management)
-├── CLAUDE.md                  # AI coding conventions
-├── AGENTS.md                  # AI navigation docs
-├── java-basic/                # Exercise modules (flat structure)
-├── java8/
-├── jvm-memory/
-└── ...
-```
-
-## Tech Stack
-
-- Java 8
-- Maven 3.x (multi-module)
-- JUnit 4 + Mockito + AssertJ
