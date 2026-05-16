@@ -1,6 +1,6 @@
 package manfred.exercises.lang.dsl;
 
-import manfred.exercises.lang.stream.Dish;
+import manfred.exercises.lang.stream.model.Dish;
 
 import java.util.List;
 import java.util.Map;
@@ -8,7 +8,7 @@ import java.util.function.Function;
 import java.util.stream.Collector;
 
 import static java.util.stream.Collectors.groupingBy;
-import static manfred.exercises.lang.stream.Dish.menu;
+import static manfred.exercises.lang.stream.model.Dish.menu;
 import static manfred.exercises.lang.dsl.Grouping.GroupingBuilder.groupOn;
 
 /**

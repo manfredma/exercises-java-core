@@ -1,5 +1,6 @@
 package manfred.exercises.lang.stream;
 
+import manfred.exercises.lang.stream.model.Dish;
 import java.util.*;
 
 import static java.util.Comparator.comparing;

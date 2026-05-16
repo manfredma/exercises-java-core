@@ -1,5 +1,7 @@
 package manfred.exercises.lang.stream;
 
+import manfred.exercises.lang.stream.model.Trader;
+import manfred.exercises.lang.stream.model.Transaction;
 import java.util.*;
 
 import static java.util.Comparator.comparing;

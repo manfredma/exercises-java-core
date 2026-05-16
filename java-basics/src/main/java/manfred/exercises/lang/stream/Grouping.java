@@ -1,7 +1,8 @@
 package manfred.exercises.lang.stream;
 
-import static manfred.exercises.lang.stream.Dish.menu;
-import static manfred.exercises.lang.stream.Dish.dishTags;
+import manfred.exercises.lang.stream.model.Dish;
+import static manfred.exercises.lang.stream.model.Dish.menu;
+import static manfred.exercises.lang.stream.model.Dish.dishTags;
 import java.util.*;
 
 import static java.util.stream.Collectors.*;

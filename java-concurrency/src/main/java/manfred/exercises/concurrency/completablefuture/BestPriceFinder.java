@@ -8,6 +8,9 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import manfred.exercises.concurrency.completablefuture.model.Discount;
+import manfred.exercises.concurrency.completablefuture.model.Quote;
+import manfred.exercises.concurrency.completablefuture.model.Shop;
 
 /**
  * 演示多商店价格查询的顺序、并行流与 CompletableFuture 三种实现方式对比。
