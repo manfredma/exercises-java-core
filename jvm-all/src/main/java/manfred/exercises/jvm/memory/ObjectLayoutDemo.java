@@ -9,8 +9,18 @@ import org.openjdk.jol.vm.VM;
 import java.util.Scanner;
 
 /**
- * @author manfred
- * @since 2019-12-17 下午1:51
+ * 演示使用 JOL（Java Object Layout）工具分析 JVM 中对象的内存布局。
+ *
+ * <p>知识点：
+ * <ul>
+ *   <li>JVM 对象头（Object Header）由 Mark Word（8 字节）和 Class Pointer（4/8 字节）组成；数组对象额外包含 4 字节 length 字段</li>
+ *   <li>Mark Word 存储 hashCode、GC 分代年龄、锁状态标志（偏向锁/轻量级锁/重量级锁）等元数据</li>
+ *   <li>默认开启指针压缩（{@code -XX:+UseCompressedOops}）时，Class Pointer 压缩为 4 字节，引用字段也压缩为 4 字节</li>
+ *   <li>对象内存按 8 字节对齐（padding），实际占用 = ceil(header + fields) 向上取整到 8 的倍数</li>
+ *   <li>{@link ClassLayout#parseClass(Class)} 分析类的静态布局（不含实例数据）；{@code parseInstance(Object)} 分析具体实例的实际布局</li>
+ *   <li>{@link GraphLayout#parseInstance(Object...)} 递归分析对象图，展示对象及其所有可达引用的总内存占用</li>
+ *   <li>{@link VM#current()} 输出当前 JVM 的内存模型参数，如地址大小、对齐方式、压缩 OOP 基地址等</li>
+ * </ul>
  */
 public class ObjectLayoutDemo {
 

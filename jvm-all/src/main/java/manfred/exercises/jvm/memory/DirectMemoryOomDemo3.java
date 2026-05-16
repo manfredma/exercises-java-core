@@ -17,7 +17,7 @@ import java.util.List;
  * 大量DirectByteBuffer对象移动到old gen。没有Full gc的发生，
  * 导致在程序中可能死掉的DirectByteBuffer对象没有回收掉，native memory则满了，发生OOM
  *
- * @author Manfred since 2019/5/31
+
  */
 public class DirectMemoryOomDemo3 {
     public static void main(String[] args) {

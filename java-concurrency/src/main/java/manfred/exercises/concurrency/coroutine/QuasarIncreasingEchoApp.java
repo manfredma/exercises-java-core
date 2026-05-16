@@ -12,7 +12,7 @@ import java.util.concurrent.ExecutionException;
 /**
  * Increasing-Echo Quasar Example
  *
- * @author circlespainter
+
  */
 public class QuasarIncreasingEchoApp {
 
