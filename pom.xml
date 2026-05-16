@@ -195,14 +195,5 @@
         </dependencies>
     </dependencyManagement>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>com.github.ekryd.sortpom</groupId>
-                <artifactId>sortpom-maven-plugin</artifactId>
-                <version>2.15.0</version>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
