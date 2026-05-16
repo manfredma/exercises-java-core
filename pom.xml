@@ -11,6 +11,7 @@
 
     <modules>
         <module>java-basics</module>
+        <module>java-lambda</module>
         <module>java-io</module>
         <module>java-serialization</module>
         <module>java-concurrency</module>
