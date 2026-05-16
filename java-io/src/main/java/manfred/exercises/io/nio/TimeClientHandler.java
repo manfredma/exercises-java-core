@@ -44,7 +44,6 @@ public class TimeClientHandler implements Runnable {
         }
     }
 
-
     @Override
     public void run() {
         try {
@@ -78,7 +77,6 @@ public class TimeClientHandler implements Runnable {
                 System.exit(1);
             }
         }
-
 
         if (selector != null) {
             try {

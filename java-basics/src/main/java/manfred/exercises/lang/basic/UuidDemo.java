@@ -3,12 +3,16 @@ package manfred.exercises.lang.basic;
 import java.util.UUID;
 
 /**
- * @author Manfred since 2019/7/2
+ * 演示使用 {@link java.util.UUID#randomUUID()} 生成不含连字符的 32 位 GUID 字符串。
+ *
+ * {@code createGUID()} 方法调用 {@code UUID.randomUUID()} 生成标准 UUID，
+ * 再通过 {@code replace("-", "")} 去除分隔符，得到常见于数据库主键或业务流水号场景的
+ * 32 位十六进制字符串，连续生成 8 个以直观展示每次结果均唯一。
  */
-public class UuidTest {
+public class UuidDemo {
 
     public static void main(String[] args) throws Exception {
-        new UuidTest().testCreate();
+        new UuidDemo().testCreate();
     }
 
     public void testCreate() {

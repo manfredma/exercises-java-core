@@ -28,7 +28,6 @@ public class ObjectLayout {
         out.println("hash is " + Integer.toHexString(System.identityHashCode(x)));
         out.println(ClassLayout.parseInstance(x).toPrintable());
 
-
         out.println(ClassLayout.parseInstance(new int[40]).toPrintable());
         out.println(ClassLayout.parseInstance(new Object[40]).toPrintable());
     }

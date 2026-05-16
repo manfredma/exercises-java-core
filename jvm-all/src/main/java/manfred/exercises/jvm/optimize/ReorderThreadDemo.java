@@ -3,7 +3,6 @@ package manfred.exercises.jvm.optimize;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.atomic.AtomicInteger;
 
-
 /**
  * 通过 CyclicBarrier 精确控制两线程并发执行，检测指令重排序现象。
  *

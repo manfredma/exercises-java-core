@@ -44,7 +44,6 @@ public class InstructionReorderDemo {
         }
     }
 
-
     public static void shortWait(long interval){
         long start = System.nanoTime();
         long end;

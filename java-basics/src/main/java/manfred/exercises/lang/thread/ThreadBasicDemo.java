@@ -27,7 +27,6 @@ public class ThreadBasicDemo {
         System.out.println("父线程 End" + Instant.now().toString());
     }
 
-
     public synchronized static void xxx() {
         System.out.println("xxx begin +++");
         long begin = System.currentTimeMillis();

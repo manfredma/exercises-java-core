@@ -1,7 +1,12 @@
 package manfred.exercises.jvm.optimize;
 
 /**
- * @author Manfred since 2019/7/11
+ * 演示 JIT 编译器逃逸分析优化的典型场景。
+ *
+ * {@code getAge()} 方法中创建的 {@code Student} 对象仅在方法内部使用，不会逃逸到
+ * 堆上，JIT 可通过逃逸分析将其优化为栈上分配（Stack Allocation）或标量替换
+ * （Scalar Replacement），从而消除 GC 压力。循环调用 200000 次可触发方法热编译，
+ * 结合 {@code -XX:+PrintGC} 等 JVM 参数可观察 GC 次数的明显减少。
  */
 public class EscapeAnalysisDemo {
     public static void main(String[] args) {

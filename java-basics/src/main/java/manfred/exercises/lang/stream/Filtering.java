@@ -5,7 +5,6 @@ import static manfred.exercises.lang.stream.model.Dish.menu;
 import java.util.*;
 import static java.util.stream.Collectors.toList;
 
-
 /**
  * 演示 Stream 的过滤与截断操作。
  *

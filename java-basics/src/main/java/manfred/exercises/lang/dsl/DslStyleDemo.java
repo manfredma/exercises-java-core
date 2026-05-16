@@ -11,8 +11,6 @@ import manfred.exercises.lang.dsl.model.Order;
 import manfred.exercises.lang.dsl.model.Stock;
 import manfred.exercises.lang.dsl.model.Trade;
 
-
-
 /**
  * 对比演示构建订单对象的四种 DSL 风格。
  *

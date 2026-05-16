@@ -30,5 +30,4 @@ public class JavaGenericClass<T> {
         System.out.println("hello, world");
     }
 
-
 }

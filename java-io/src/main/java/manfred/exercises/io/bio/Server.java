@@ -6,7 +6,11 @@ import java.net.Socket;
 import java.util.Arrays;
 
 /**
- * @author Manfred since 2019/8/14
+ * BIO 模式下的多线程 TCP 回显服务器。
+ *
+ * 监听指定端口，每接受一个客户端连接就创建一个新线程处理，由内部类 {@code Handler}
+ * 完成数据读取与原样回写。演示了传统"一连接一线程"的 BIO 并发模型及其在高并发场景
+ * 下线程数量无限增长的局限性。
  */
 public class Server implements Runnable {
     static final int PORT = 18080;

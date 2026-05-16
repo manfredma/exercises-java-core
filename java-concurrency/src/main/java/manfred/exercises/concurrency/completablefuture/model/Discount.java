@@ -3,8 +3,6 @@ package manfred.exercises.concurrency.completablefuture.model;
 import static manfred.exercises.concurrency.completablefuture.Util.delay;
 import static manfred.exercises.concurrency.completablefuture.Util.format;
 
-
-
 /**
  * 提供折扣码枚举与折扣计算逻辑，模拟远程折扣服务的延迟调用。
  *

@@ -2,6 +2,13 @@ package manfred.exercises.jvm.memory;
 
 import java.nio.ByteBuffer;
 
+/**
+ * 堆内内存与堆外直接内存在分配和访问性能上的对比测试。
+ *
+ * 分别使用 {@code ByteBuffer.allocate} 和 {@code ByteBuffer.allocateDirect} 进行
+ * 百万次读写操作与百万次分配操作，通过计时输出对比两种内存在吞吐量和分配开销上的差异，
+ * 直观验证直接内存"分配慢、访问快"的特点，为高性能 I/O 场景的内存选型提供参考。
+ */
 class DirectMemory {
 
     // 分配堆内存

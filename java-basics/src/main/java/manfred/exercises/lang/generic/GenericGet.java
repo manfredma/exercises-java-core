@@ -1,6 +1,5 @@
 package manfred.exercises.lang.generic;
 
-
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
@@ -46,8 +45,6 @@ public class GenericGet {
         //打印subClass2获取的泛型
         System.out.println("subClass2: " + findGenericType(subClass2.getClass()));
 
-
-
         // 2.
         ParentGeneric<String> parentGeneric1 = new ParentGeneric<String>();
         ParentGeneric<String> parentGeneric2 = new ParentGeneric<String>(){};
@@ -68,5 +65,4 @@ public class GenericGet {
 
     }
 }
-
 

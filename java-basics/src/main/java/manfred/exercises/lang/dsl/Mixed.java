@@ -5,8 +5,6 @@ import static manfred.exercises.lang.dsl.MixedBuilder.buy;
 import static manfred.exercises.lang.dsl.MixedBuilder.sell;
 import manfred.exercises.lang.dsl.model.Order;
 
-
-
 /**
  * 演示混合风格 DSL：嵌套函数与 Lambda 结合构建订单。
  *

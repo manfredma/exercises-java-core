@@ -9,9 +9,9 @@ import com.google.protobuf.InvalidProtocolBufferException;
  * 从字节数组还原为 Person 对象，并打印各字段值，验证 Protobuf 编解码的正确性与
  * 二进制格式的紧凑性。
  */
-public class ProtobufTest {
+public class ProtobufDemo {
     public static void main(String[] args) throws Exception {
-        new ProtobufTest().testN();
+        new ProtobufDemo().testN();
     }
 
     public void testN() throws InvalidProtocolBufferException {

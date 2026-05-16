@@ -10,7 +10,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
  */
 public class ThreadYieldDemo implements Runnable {
 
-
     private static final AtomicBoolean LOCK = new AtomicBoolean(false);
 
     public void run() {

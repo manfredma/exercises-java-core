@@ -7,7 +7,6 @@ import java.util.*;
 
 import static java.util.stream.Collectors.*;
 
-
 /**
  * 演示 Stream Collectors.groupingBy 的多种分组用法。
  *

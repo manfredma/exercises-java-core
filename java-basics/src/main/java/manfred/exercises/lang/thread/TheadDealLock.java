@@ -45,5 +45,4 @@ public class TheadDealLock {
         producer.start();
     }
 
-
 }

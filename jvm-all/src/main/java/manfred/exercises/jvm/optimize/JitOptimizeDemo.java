@@ -8,9 +8,6 @@ package manfred.exercises.jvm.optimize;
 -XX:+PrintCompilation -XX:+UnlockDiagnosticVMOptions -XX:+PrintInlining
  */
 
-/**
- * @author Manfred since 2019/7/11
- */
 public class JitOptimizeDemo {
     private int add1(int x1, int x2, int x3, int x4) {
         return add2(x1, x2) + add2(x3, x4);

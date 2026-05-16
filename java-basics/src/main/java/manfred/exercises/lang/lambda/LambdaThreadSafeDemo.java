@@ -126,7 +126,6 @@ public class LambdaThreadSafeDemo {
 
         System.out.println(now() + " parallelStream处理完成");
 
-
     }
 
     private static void execParallel() {

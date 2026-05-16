@@ -21,10 +21,7 @@ public class WildCard {
         // ============================================================================================================
         Number number = new Integer(1111);
 
-
         // ArrayList<Number> x = new ArrayList<Integer>();
-
-
 
         ArrayList<? extends Number> numberList = new ArrayList<Integer>();
 
@@ -38,7 +35,6 @@ public class WildCard {
         getNumberData(integerList);
         getNumberData(numberList2);
 
-
         // ============================================================================================================
         // 逆变
         // 问题：为啥使用下边界通配符的变量可以写，而不建议读？
@@ -51,7 +47,6 @@ public class WildCard {
         List<Object> objectList3 = new ArrayList<>();
         setNumberData(numberList3);
         setNumberData(objectList3);
-
 
         List<String> stringList4 = new ArrayList<>();
         List<Number> numberList4 = new ArrayList<>();
@@ -67,8 +62,6 @@ public class WildCard {
     public static void getData(List<?> data) {
         System.out.println("data: " + data.get(0));
     }
-
-
 
     public static void getNumberData(List<? extends Number> data) {
         System.out.println("Number data :" + data.get(0));

@@ -3,12 +3,18 @@ package manfred.exercises.jvm.memory;
 import java.nio.ByteBuffer;
 
 /**
- * @author Manfred since 2019/8/9
+ * 演示堆外直接内存 DirectByteBuffer 的各项操作特性。
+ *
+ * 通过四个独立方法分别展示：mark/reset/rewind 指针控制（{@code testProperties}）、
+ * 写入字节数组与字符串后缓冲区状态变化（{@code testWriteRead}）、flip 后按数组
+ * 批量读取数据（{@code testReadToArray}）、以及 compact 压缩未读数据的行为
+ * （{@code testCompact}），帮助理解 DirectByteBuffer 相对于堆内 ByteBuffer
+ * 的使用方式差异。
  */
-public class DirectByteBufferTest {
+public class DirectByteBufferDemo {
 
     public static void main(String[] args) throws Exception {
-        DirectByteBufferTest t = new DirectByteBufferTest();
+        DirectByteBufferDemo t = new DirectByteBufferDemo();
         t.testProperties();
         t.testWriteRead();
         t.testReadToArray();

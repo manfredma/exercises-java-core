@@ -37,5 +37,4 @@ public class ProtobufSubscribeDemo {
         System.out.println("Assert equal : --> " + req2.equals(req));
     }
 
-
 }

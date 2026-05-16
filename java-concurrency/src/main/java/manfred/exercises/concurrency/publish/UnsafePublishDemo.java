@@ -9,7 +9,6 @@ package manfred.exercises.concurrency.publish;
  */
 public class UnsafePublishDemo {
 
-
     public static void main(String[] args) {
         Init init = new Init();
 

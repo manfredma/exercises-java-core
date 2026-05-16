@@ -4,7 +4,11 @@ import java.io.IOException;
 import java.net.Socket;
 
 /**
- * @author Manfred since 2019/8/14
+ * BIO 模式下的 TCP 客户端，向服务端发送消息并接收回显。
+ *
+ * 使用传统阻塞式 {@code java.net.Socket} 连接到本地 {@code Server}，
+ * 发送 "hello, world" 字节流后同步等待服务端回写，演示 BIO 编程模型中
+ * 请求-响应的单次同步交互流程。
  */
 public class Client implements Runnable {
 

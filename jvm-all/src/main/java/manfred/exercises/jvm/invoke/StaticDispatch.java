@@ -33,7 +33,6 @@ public class StaticDispatch {
 
     }
 
-
     public void sayHello(Human guy) {
         System.out.println("Hello guy");
     }

@@ -28,5 +28,4 @@ public class ConcurrentCollectionDemo {
         x.remove(1);
     }
 
-
 }

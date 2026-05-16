@@ -33,6 +33,5 @@ public class BigDecimalDemo {
         System.out.println(new BigDecimal("1111111111111111111111110000000000000000000.0000").scale());
         System.out.println(new BigDecimal("0.0000"));
 
-
     }
 }

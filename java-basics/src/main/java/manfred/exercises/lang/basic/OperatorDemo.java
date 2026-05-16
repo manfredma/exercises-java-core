@@ -1,7 +1,12 @@
 package manfred.exercises.lang.basic;
 
 /**
- * @author Manfred since 2019/4/22
+ * 演示 Java 运算符求值顺序与后置自增（i++）的计算时机。
+ *
+ * 通过三组循环分别验证：字符串拼接中 {@code +} 操作符严格从左到右计算、
+ * 方法调用的实参列表按从左到右顺序对各参数求值、
+ * 以及连续两次 {@code i++} 时后一次乘法会使用前一次自增后的值作为起点，
+ * 帮助厘清后置自增在复合表达式中的副作用与求值边界。
  */
 public class OperatorDemo {
 

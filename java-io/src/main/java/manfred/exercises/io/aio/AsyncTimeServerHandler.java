@@ -18,7 +18,6 @@ public class AsyncTimeServerHandler implements Runnable {
 
     AsynchronousServerSocketChannel asynchronousServerSocketChannel;
 
-
     public AsyncTimeServerHandler(int port) {
 
         try {

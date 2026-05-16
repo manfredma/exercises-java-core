@@ -16,7 +16,6 @@ public class BytecodeDemo {
         a();
     }
 
-
     public static void main(String[] args) {
         BytecodeDemo byteCodeTest = new BytecodeDemo();
         byteCodeTest.x();

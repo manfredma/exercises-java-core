@@ -3,7 +3,13 @@ package manfred.exercises.lang.string;
 import java.util.Scanner;
 
 /**
- * @author Manfred since 2019/8/28
+ * 演示字符串规范化处理：将任意文本转换为合法的 Java 全限定类名片段。
+ *
+ * {@code generateNameWithMain} 方法依次执行小写转换、空格替换为点、
+ * 去除非字母数字和点的特殊字符、合并连续双点，并追加固定后缀类名，
+ * 综合运用了 {@link String#toLowerCase()}、{@link String#replace(CharSequence, CharSequence)}、
+ * {@link Character#isLetterOrDigit(char)} 和 {@link StringBuffer} 的字符过滤，
+ * 是练习字符串逐字符处理与多步链式替换的典型示例。
  */
 public class ClassName {
     public static String generateNameWithMain(String s, String prefix) {

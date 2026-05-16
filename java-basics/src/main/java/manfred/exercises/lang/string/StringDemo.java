@@ -4,12 +4,18 @@ import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 
 /**
- * @author Manfred since 2019/3/19
+ * 综合演示 Java {@link String} 常用 API 的行为与边界情况。
+ *
+ * 涵盖以下知识点：{@code charAt} 索引取字符、对象与字符串 {@code +} 拼接时隐式调用
+ * {@code toString()} 产生新 String 实例、{@link StringBuffer#reverse()} 反转、
+ * UTF-8 与 GBK 编码互转导致的乱码现象、带转义符的 {@code split} 正则分隔符用法、
+ * {@code null} 与字符串拼接输出字面量 {@code "null"}、{@code substring} 从尾部截取，
+ * 以及通过中间占位符绕开 {@code replace} 无法直接替换反斜杠的技巧。
  */
-public class StringTest {
+public class StringDemo {
 
     public static void main(String[] args) throws Exception {
-        StringTest t = new StringTest();
+        StringDemo t = new StringDemo();
         t.charAt();
         t.stringOperator();
         t.reverse();

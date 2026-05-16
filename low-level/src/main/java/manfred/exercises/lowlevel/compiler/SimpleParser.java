@@ -54,7 +54,6 @@ public class SimpleParser {
             System.out.println(e.getMessage());
         }
 
-
     }
 
     /**

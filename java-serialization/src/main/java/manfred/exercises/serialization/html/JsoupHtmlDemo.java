@@ -3,7 +3,6 @@ package manfred.exercises.serialization.html;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-
 /**
  * 演示使用 Jsoup 解析 HTML 字符串的基本用法。
  *

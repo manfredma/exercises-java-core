@@ -45,7 +45,6 @@ public class FalseSharingDemo {
         new Runner(opt).run();
     }
 
-
     @Benchmark
     public void runWithNoPadding() throws InterruptedException {
         Thread[] threads = new Thread[threadNum];

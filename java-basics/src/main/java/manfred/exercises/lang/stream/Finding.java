@@ -4,7 +4,6 @@ import manfred.exercises.lang.stream.model.Dish;
 import static manfred.exercises.lang.stream.model.Dish.menu;
 import java.util.*;
 
-
 /**
  * 演示 Stream 的查找与匹配操作。
  *

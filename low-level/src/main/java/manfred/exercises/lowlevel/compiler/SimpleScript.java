@@ -74,7 +74,6 @@ public class SimpleScript {
         }
     }
 
-
     /**
      * 遍历AST，计算值。
      *

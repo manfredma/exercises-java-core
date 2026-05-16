@@ -3,9 +3,13 @@ package manfred.exercises.io.nio;
 import java.nio.ByteBuffer;
 
 /**
- * @author Manfred since 2019/4/19
+ * 演示 NIO ByteBuffer 的核心状态变化。
+ *
+ * 通过 {@code allocate}、{@code put} 和 {@code flip} 三个操作，
+ * 逐步打印 ByteBuffer 的 position、limit、capacity 属性值，直观展示
+ * "写模式"切换到"读模式"时各指针的变化规律，帮助理解 ByteBuffer 双模式设计。
  */
-public class TestByteBuffer {
+public class ByteBufferDemo {
 
     public static void main(String[] args) throws Exception {
         ByteBuffer bb = ByteBuffer.allocate(10000);

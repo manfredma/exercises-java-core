@@ -216,7 +216,6 @@ public class SimpleLexer {
         //文本值
         private String text = null;
 
-
         @Override
         public TokenType getType() {
             return type;

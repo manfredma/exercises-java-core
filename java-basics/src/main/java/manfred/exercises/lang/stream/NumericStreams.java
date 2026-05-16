@@ -5,7 +5,6 @@ import static manfred.exercises.lang.stream.model.Dish.menu;
 import java.util.stream.*;
 import java.util.*;
 
-
 /**
  * 演示数值流 IntStream/LongStream 的特化操作。
  *

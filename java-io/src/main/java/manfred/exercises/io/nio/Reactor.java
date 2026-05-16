@@ -1,6 +1,5 @@
 package manfred.exercises.io.nio;
 
-
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -11,7 +10,12 @@ import java.nio.channels.SocketChannel;
 import java.util.Set;
 
 /**
- * @author Manfred since 2019/8/14
+ * 基于 Java NIO Selector 实现的单线程 Reactor 模式服务端。
+ *
+ * 演示经典 Reactor 模式的核心结构：{@code Reactor} 负责事件循环与分发，
+ * 内部类 {@code Acceptor} 处理新连接，{@code Handler} 以状态机方式处理
+ * 读写事件（状态切换版本为 {@code HandlerState}），展示非阻塞 I/O 多路复用
+ * 如何以单线程高效驱动大量并发连接。
  */
 public class Reactor implements Runnable {
     final Selector selector;
@@ -21,7 +25,6 @@ public class Reactor implements Runnable {
     private static final int MAX_IN = 1024;
 
     private static final int MAX_OUT = 1024;
-
 
     Reactor(int port) throws IOException {
         selector = Selector.open();

@@ -3,7 +3,6 @@ package manfred.exercises.serialization.html;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-
 /**
  * @Author beifengtz
  * @Site www.beifengtz.com

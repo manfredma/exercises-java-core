@@ -1,7 +1,5 @@
 package manfred.exercises.concurrency.completablefuture;
 
-
-
 import static manfred.exercises.concurrency.completablefuture.Util.delay;
 import static manfred.exercises.concurrency.completablefuture.Util.format;
 import java.util.Random;

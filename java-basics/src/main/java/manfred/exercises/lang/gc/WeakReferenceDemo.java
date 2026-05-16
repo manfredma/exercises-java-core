@@ -24,7 +24,6 @@ public class WeakReferenceDemo {
     }
 }
 
-
 class WR extends WeakReference<Object> {
 
     Object value;

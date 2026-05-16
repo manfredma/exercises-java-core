@@ -57,7 +57,6 @@ public class JavaEvolutionDemo {
                 moduleStatistics.versionCount += 1;
             }
 
-
             tx = br.readLine();
         }
 
@@ -78,7 +77,6 @@ public class JavaEvolutionDemo {
         Integer versionCount = 0;
 
         List<VersionStatistics> versionStatisticsList = new ArrayList<>();
-
 
         public ModuleStatistics(String moduleName) {
             this.moduleName = moduleName;
@@ -123,6 +121,5 @@ public class JavaEvolutionDemo {
             return usedCount;
         }
     }
-
 
 }

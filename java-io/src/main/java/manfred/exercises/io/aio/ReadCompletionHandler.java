@@ -18,7 +18,6 @@ public class ReadCompletionHandler implements CompletionHandler<Integer, ByteBuf
 
     private AsynchronousSocketChannel channel;
 
-
     public ReadCompletionHandler(AsynchronousSocketChannel result) {
         this.channel = result;
     }
