@@ -1,5 +1,8 @@
 package manfred.exercises.lowlevel.compiler;
 
+import manfred.exercises.lowlevel.compiler.model.TokenType;
+
+import manfred.exercises.lowlevel.compiler.model.ASTNodeType;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.HashMap;

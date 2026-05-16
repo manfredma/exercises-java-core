@@ -1,5 +1,6 @@
 package manfred.exercises.lowlevel.compiler;
 
+import manfred.exercises.lowlevel.compiler.model.ASTNodeType;
 import java.util.List;
 
 /**

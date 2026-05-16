@@ -1,4 +1,4 @@
-package manfred.exercises.io.nio;
+package manfred.exercises.io.nio.handler;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

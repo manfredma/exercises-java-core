@@ -1,4 +1,4 @@
-package manfred.exercises.lowlevel.compiler;
+package manfred.exercises.lowlevel.compiler.model;
 
 /**
  * Token的类型

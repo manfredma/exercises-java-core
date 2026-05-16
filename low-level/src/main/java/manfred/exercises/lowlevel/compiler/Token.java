@@ -1,5 +1,7 @@
 package manfred.exercises.lowlevel.compiler;
 
+import manfred.exercises.lowlevel.compiler.model.TokenType;
+
 /**
  * 一个简单的Token。
  * 只有类型和文本值两个属性。

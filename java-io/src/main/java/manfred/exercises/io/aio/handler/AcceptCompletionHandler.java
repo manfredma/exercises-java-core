@@ -1,4 +1,4 @@
-package manfred.exercises.io.aio;
+package manfred.exercises.io.aio.handler;
 
 import java.nio.ByteBuffer;
 import java.nio.channels.AsynchronousSocketChannel;

@@ -1,4 +1,4 @@
-package manfred.exercises.serialization.messagepack;
+package manfred.exercises.serialization.messagepack.model;
 
 import org.msgpack.annotation.Message;
 

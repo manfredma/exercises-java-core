@@ -1,5 +1,6 @@
 package manfred.exercises.lowlevel.compiler;
 
+import manfred.exercises.lowlevel.compiler.model.TokenType;
 import java.io.CharArrayReader;
 import java.io.IOException;
 import java.io.Reader;

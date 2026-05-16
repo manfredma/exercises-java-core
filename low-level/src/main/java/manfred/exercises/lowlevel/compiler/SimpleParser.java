@@ -1,5 +1,7 @@
 package manfred.exercises.lowlevel.compiler;
 
+import manfred.exercises.lowlevel.compiler.model.ASTNodeType;
+import manfred.exercises.lowlevel.compiler.model.TokenType;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

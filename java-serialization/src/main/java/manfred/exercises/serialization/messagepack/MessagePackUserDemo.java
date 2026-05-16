@@ -1,5 +1,6 @@
 package manfred.exercises.serialization.messagepack;
 
+import manfred.exercises.serialization.messagepack.model.UserInfo;
 import org.msgpack.MessagePack;
 
 import java.io.IOException;

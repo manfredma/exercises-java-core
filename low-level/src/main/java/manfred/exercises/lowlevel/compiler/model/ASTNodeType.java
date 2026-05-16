@@ -1,4 +1,4 @@
-package manfred.exercises.lowlevel.compiler;
+package manfred.exercises.lowlevel.compiler.model;
 
 /**
  * AST节点的类型。
