@@ -1,4 +1,4 @@
-package manfred.exercises.lang.gc;
+package manfred.exercises.jvm.gc;
 
 import java.lang.ref.WeakReference;
 import java.util.concurrent.TimeUnit;

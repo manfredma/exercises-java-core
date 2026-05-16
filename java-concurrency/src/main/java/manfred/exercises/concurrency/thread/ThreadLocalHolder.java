@@ -1,4 +1,4 @@
-package manfred.exercises.lang.thread;
+package manfred.exercises.concurrency.thread;
 
 /**
  * 演示 ThreadLocal 的公有静态字段持有方式。

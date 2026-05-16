@@ -1,4 +1,4 @@
-package manfred.exercises.lang.thread;
+package manfred.exercises.concurrency.thread;
 
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Field;

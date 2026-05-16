@@ -1,4 +1,4 @@
-package manfred.exercises.lang.stream;
+package manfred.exercises.concurrency.parallel;
 
 import java.util.concurrent.TimeUnit;
 import java.util.stream.LongStream;

@@ -1,4 +1,4 @@
-package manfred.exercises.lang.thread;
+package manfred.exercises.concurrency.thread;
 
 /**
  * 演示 Thread.setDefaultUncaughtExceptionHandler 全局异常处理。

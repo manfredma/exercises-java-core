@@ -1,4 +1,4 @@
-package manfred.exercises.lang.thread;
+package manfred.exercises.concurrency.thread;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 

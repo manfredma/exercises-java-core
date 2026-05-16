@@ -1,4 +1,4 @@
-package manfred.exercises.lang.stream;
+package manfred.exercises.concurrency.forkjoin;
 
 import java.util.concurrent.RecursiveTask;
 import java.util.concurrent.ForkJoinPool;

@@ -1,7 +1,8 @@
-package manfred.exercises.lang.stream;
+package manfred.exercises.concurrency.parallel;
 
 import java.util.concurrent.*;
 import java.util.function.*;
+import manfred.exercises.concurrency.forkjoin.ForkJoinSumCalculator;
 
 /**
  * 手动测量多种求和实现的执行耗时，对比顺序与并行性能。

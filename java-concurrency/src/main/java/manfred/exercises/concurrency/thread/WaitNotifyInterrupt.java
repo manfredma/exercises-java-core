@@ -1,4 +1,4 @@
-package manfred.exercises.lang.thread;
+package manfred.exercises.concurrency.thread;
 
 /**
  * 演示 interrupt 中断处于 wait 等待状态的线程。

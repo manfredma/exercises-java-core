@@ -1,4 +1,4 @@
-package manfred.exercises.lang.thread;
+package manfred.exercises.concurrency.thread;
 import java.time.Instant;
 import java.util.concurrent.TimeUnit;
 
