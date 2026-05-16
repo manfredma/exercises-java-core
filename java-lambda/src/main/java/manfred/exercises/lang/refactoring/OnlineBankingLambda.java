@@ -1,5 +1,6 @@
 package manfred.exercises.lang.refactoring;
 
+import manfred.exercises.lang.refactoring.template.OnlineBanking;
 import manfred.exercises.lang.lambda.model.Lambda;
 import java.util.function.Consumer;
 

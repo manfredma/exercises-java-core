@@ -1,5 +1,7 @@
 package manfred.exercises.lang.dsl.model;
 
+import manfred.exercises.lang.dsl.builder.MethodChainingOrderBuilder;
+import manfred.exercises.lang.dsl.builder.LambdaOrderBuilder;
 import java.util.ArrayList;
 import java.util.List;
 

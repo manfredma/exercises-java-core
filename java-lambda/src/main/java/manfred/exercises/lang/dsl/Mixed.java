@@ -1,9 +1,9 @@
 package manfred.exercises.lang.dsl;
 
 import manfred.exercises.lang.lambda.model.Lambda;
-import static manfred.exercises.lang.dsl.MixedBuilder.forCustomer;
-import static manfred.exercises.lang.dsl.MixedBuilder.buy;
-import static manfred.exercises.lang.dsl.MixedBuilder.sell;
+import static manfred.exercises.lang.dsl.builder.MixedBuilder.forCustomer;
+import static manfred.exercises.lang.dsl.builder.MixedBuilder.buy;
+import static manfred.exercises.lang.dsl.builder.MixedBuilder.sell;
 import manfred.exercises.lang.dsl.model.Order;
 
 /**

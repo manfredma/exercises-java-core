@@ -1,4 +1,6 @@
-package manfred.exercises.lang.defaultmethod;
+package manfred.exercises.lang.defaultmethod.util;
+
+import manfred.exercises.lang.defaultmethod.Resizable;
 
 import java.util.List;
 

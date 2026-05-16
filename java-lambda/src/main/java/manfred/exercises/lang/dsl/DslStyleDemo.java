@@ -1,13 +1,14 @@
 package manfred.exercises.lang.dsl;
 
+import manfred.exercises.lang.dsl.builder.LambdaOrderBuilder;
 import manfred.exercises.lang.lambda.model.Lambda;
-import static manfred.exercises.lang.dsl.MethodChainingOrderBuilder.forCustomer;
-import static manfred.exercises.lang.dsl.NestedFunctionOrderBuilder.at;
-import static manfred.exercises.lang.dsl.NestedFunctionOrderBuilder.buy;
-import static manfred.exercises.lang.dsl.NestedFunctionOrderBuilder.on;
-import static manfred.exercises.lang.dsl.NestedFunctionOrderBuilder.order;
-import static manfred.exercises.lang.dsl.NestedFunctionOrderBuilder.sell;
-import static manfred.exercises.lang.dsl.NestedFunctionOrderBuilder.stock;
+import static manfred.exercises.lang.dsl.builder.MethodChainingOrderBuilder.forCustomer;
+import static manfred.exercises.lang.dsl.builder.NestedFunctionOrderBuilder.at;
+import static manfred.exercises.lang.dsl.builder.NestedFunctionOrderBuilder.buy;
+import static manfred.exercises.lang.dsl.builder.NestedFunctionOrderBuilder.on;
+import static manfred.exercises.lang.dsl.builder.NestedFunctionOrderBuilder.order;
+import static manfred.exercises.lang.dsl.builder.NestedFunctionOrderBuilder.sell;
+import static manfred.exercises.lang.dsl.builder.NestedFunctionOrderBuilder.stock;
 import manfred.exercises.lang.dsl.model.Order;
 import manfred.exercises.lang.dsl.model.Stock;
 import manfred.exercises.lang.dsl.model.Trade;

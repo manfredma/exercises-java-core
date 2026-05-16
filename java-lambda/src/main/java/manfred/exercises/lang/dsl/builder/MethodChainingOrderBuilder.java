@@ -1,4 +1,4 @@
-package manfred.exercises.lang.dsl;
+package manfred.exercises.lang.dsl.builder;
 
 import manfred.exercises.lang.dsl.model.Order;
 import manfred.exercises.lang.dsl.model.Stock;

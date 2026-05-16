@@ -1,5 +1,9 @@
 package manfred.exercises.lang.defaultmethod;
 
+import manfred.exercises.lang.defaultmethod.util.Utils;
+import manfred.exercises.lang.defaultmethod.impl.Triangle;
+import manfred.exercises.lang.defaultmethod.impl.Square;
+import manfred.exercises.lang.defaultmethod.impl.Ellipse;
 import java.util.Arrays;
 import java.util.List;
 
