@@ -7,6 +7,8 @@
     <groupId>manfred.end</groupId>
     <artifactId>exercises</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
     <modules>
         <module>java-basics</module>
         <module>java-io</module>
@@ -16,169 +18,185 @@
         <module>low-level</module>
         <module>java-net</module>
     </modules>
-    <packaging>pom</packaging>
 
     <properties>
-        <junit4-version>4.13.1</junit4-version>
-        <jmh-version>1.23</jmh-version>
-        <mockito-version>2.23.0</mockito-version>
-        <slf4j-version>1.7.25</slf4j-version>
-        <snakeyaml-version>1.28</snakeyaml-version>
-        <guava-version>30.1-jre</guava-version>
-        <commons-lang3-version>3.8.1</commons-lang3-version>
-        <jackson-version>2.15.2</jackson-version>
-        <jsonp-version>1.13.1</jsonp-version>
-        <spring-boot-2-version>2.4.4</spring-boot-2-version>
-
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <junit4.version>4.13.1</junit4.version>
+        <jmh.version>1.23</jmh.version>
+        <mockito.version>2.23.0</mockito.version>
+        <slf4j.version>1.7.25</slf4j.version>
+        <snakeyaml.version>1.28</snakeyaml.version>
+        <guava.version>30.1-jre</guava.version>
+        <commons-lang3.version>3.8.1</commons-lang3.version>
+        <jackson.version>2.15.2</jackson.version>
+        <jsoup.version>1.13.1</jsoup.version>
+        <asm.version>9.2</asm.version>
+        <spring-boot.version>2.4.4</spring-boot.version>
+        <fastjson.version>1.2.76</fastjson.version>
+        <gson.version>2.8.9</gson.version>
+        <msgpack.version>0.6.12</msgpack.version>
+        <protobuf.version>4.34.1</protobuf.version>
+        <transmittable-thread-local.version>2.12.1</transmittable-thread-local.version>
+        <quasar.version>0.7.9</quasar.version>
+        <ea-async.version>1.2.3</ea-async.version>
+        <jol.version>0.9</jol.version>
+        <byte-buddy.version>1.11.0</byte-buddy.version>
+        <javassist.version>3.28.0-GA</javassist.version>
     </properties>
 
+    <!-- 全局依赖：所有模块均需要 -->
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>${junit4-version}</version>
+            <version>${junit4.version}</version>
         </dependency>
         <dependency>
             <groupId>org.openjdk.jmh</groupId>
             <artifactId>jmh-core</artifactId>
-            <version>${jmh-version}</version>
+            <version>${jmh.version}</version>
         </dependency>
         <dependency>
             <groupId>org.openjdk.jmh</groupId>
             <artifactId>jmh-generator-annprocess</artifactId>
-            <version>${jmh-version}</version>
+            <version>${jmh.version}</version>
         </dependency>
     </dependencies>
 
+    <!-- 版本管理：子模块按需引用，无需写版本号 -->
     <dependencyManagement>
         <dependencies>
-            <!-- Logging -->
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mockito.version}</version>
+                <scope>test</scope>
+            </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>${slf4j-version}</version>
+                <version>${slf4j.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-simple</artifactId>
-                <version>${slf4j-version}</version>
+                <version>${slf4j.version}</version>
             </dependency>
-
-            <!-- YAML -->
             <dependency>
                 <groupId>org.yaml</groupId>
                 <artifactId>snakeyaml</artifactId>
-                <version>${snakeyaml-version}</version>
+                <version>${snakeyaml.version}</version>
             </dependency>
-
-            <!-- Test -->
-            <dependency>
-                <groupId>org.mockito</groupId>
-                <artifactId>mockito-core</artifactId>
-                <version>${mockito-version}</version>
-                <scope>test</scope>
-            </dependency>
-
-            <!-- Utilities -->
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>${guava-version}</version>
+                <version>${guava.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>${commons-lang3-version}</version>
+                <version>${commons-lang3.version}</version>
             </dependency>
-
-            <!-- JSON -->
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-core</artifactId>
-                <version>${jackson-version}</version>
+                <version>${jackson.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
-                <version>${jackson-version}</version>
+                <version>${jackson.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-annotations</artifactId>
-                <version>${jackson-version}</version>
+                <version>${jackson.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.fge</groupId>
                 <artifactId>json-schema-validator</artifactId>
                 <version>2.2.6</version>
             </dependency>
-
-            <!-- HTML -->
             <dependency>
                 <groupId>org.jsoup</groupId>
                 <artifactId>jsoup</artifactId>
-                <version>${jsonp-version}</version>
+                <version>${jsoup.version}</version>
             </dependency>
-
-            <!-- Bytecode -->
             <dependency>
                 <groupId>org.ow2.asm</groupId>
                 <artifactId>asm</artifactId>
-                <version>9.2</version>
+                <version>${asm.version}</version>
             </dependency>
-
-            <!-- Spring Boot (only what's actually used) -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-autoconfigure</artifactId>
-                <version>${spring-boot-2-version}</version>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <!-- Serialization -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.msgpack</groupId>
+                <artifactId>msgpack</artifactId>
+                <version>${msgpack.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.protobuf</groupId>
+                <artifactId>protobuf-java</artifactId>
+                <version>${protobuf.version}</version>
+            </dependency>
+            <!-- Concurrency -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>transmittable-thread-local</artifactId>
+                <version>${transmittable-thread-local.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>co.paralleluniverse</groupId>
+                <artifactId>quasar-core</artifactId>
+                <version>${quasar.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ea.async</groupId>
+                <artifactId>ea-async</artifactId>
+                <version>${ea-async.version}</version>
+            </dependency>
+            <!-- JVM -->
+            <dependency>
+                <groupId>org.openjdk.jol</groupId>
+                <artifactId>jol-core</artifactId>
+                <version>${jol.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.bytebuddy</groupId>
+                <artifactId>byte-buddy</artifactId>
+                <version>${byte-buddy.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.bytebuddy</groupId>
+                <artifactId>byte-buddy-agent</artifactId>
+                <version>${byte-buddy.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>${javassist.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
-    <repositories>
-        <repository>
-            <id>aliyun</id>
-            <url>https://maven.aliyun.com/repository/public</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>aliyun-plugin</id>
-            <url>https://maven.aliyun.com/repository/public</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
-
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <compilerArgument>-XDignore.symbol.file</compilerArgument>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-help-plugin</artifactId>
-                <version>3.2.0</version>
-            </plugin>
             <plugin>
                 <groupId>com.github.ekryd.sortpom</groupId>
                 <artifactId>sortpom-maven-plugin</artifactId>
