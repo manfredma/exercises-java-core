@@ -1,5 +1,9 @@
 package manfred.exercises.lang.optional;
 
+import manfred.exercises.lang.optional.model.Person;
+import manfred.exercises.lang.optional.model.Car;
+import manfred.exercises.lang.optional.model.Insurance;
+
 import static java.util.stream.Collectors.toSet;
 
 import java.util.List;

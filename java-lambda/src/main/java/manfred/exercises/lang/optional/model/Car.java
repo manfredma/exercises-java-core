@@ -1,4 +1,4 @@
-package manfred.exercises.lang.optional;
+package manfred.exercises.lang.optional.model;
 
 import java.util.*;
 

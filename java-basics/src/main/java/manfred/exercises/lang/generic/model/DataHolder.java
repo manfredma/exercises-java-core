@@ -1,4 +1,4 @@
-package manfred.exercises.lang.generic;
+package manfred.exercises.lang.generic.model;
 
 /**
  * Java 泛型举例

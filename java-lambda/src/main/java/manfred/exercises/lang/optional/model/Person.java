@@ -1,4 +1,7 @@
-package manfred.exercises.lang.optional;
+package manfred.exercises.lang.optional.model;
+
+import manfred.exercises.lang.optional.model.Car;
+import manfred.exercises.lang.optional.model.Insurance;
 
 import java.util.*;
 

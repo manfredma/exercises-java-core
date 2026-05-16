@@ -1,4 +1,4 @@
-package manfred.exercises.lang.optional;
+package manfred.exercises.lang.optional.model;
 
 /**
  * Optional 链式调用练习中的保险领域模型。
