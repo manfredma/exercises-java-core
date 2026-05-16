@@ -11,7 +11,7 @@ import java.util.Date;
  * 以及包含星期、时区等完整格式字符串下的输出结果，
  * 练习 SimpleDateFormat 的模式字符与国际化日期处理。
  */
-public class I18NTester {
+public class I18NDemo {
     public static void main(String[] args) throws ParseException {
         String pattern = "dd-MM-yy";
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);

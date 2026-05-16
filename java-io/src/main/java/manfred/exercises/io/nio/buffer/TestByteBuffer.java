@@ -1,7 +1,5 @@
 package manfred.exercises.io.nio.buffer;
 
-import org.junit.Test;
-
 import java.nio.ByteBuffer;
 
 /**
@@ -9,8 +7,7 @@ import java.nio.ByteBuffer;
  */
 public class TestByteBuffer {
 
-    @Test
-    public void test1() {
+    public static void main(String[] args) throws Exception {
         ByteBuffer bb = ByteBuffer.allocate(10000);
         System.out.println("** init: ");
         System.out.println("array: " + new String(bb.array()) + ", limit:" + bb.limit() + ", capacity:" + bb.capacity() + ", position:" + bb.position());

@@ -1,13 +1,14 @@
 package manfred.exercises.lang.basic.operator;
 
-import org.junit.Test;
-
 /**
  * @author Manfred since 2019/4/22
  */
 public class OperatorDemo {
 
-    @Test
+    public static void main(String[] args) throws Exception {
+        new OperatorDemo().testParameter();
+    }
+
     public void testParameter() {
 
         // + 号操作符从左到右计算

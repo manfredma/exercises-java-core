@@ -9,7 +9,7 @@ import java.security.ProtectionDomain;
  * 实现了 ClassFileTransformer 接口，在每个类被加载时打印类名及其类加载器信息，
  * 用于理解 JVM 类加载过程中字节码转换的时机和可操作空间。返回 null 表示不修改字节码。
  */
-public class TestTransformer implements ClassFileTransformer {
+public class TransformerAgentDemo implements ClassFileTransformer {
     @Override
     public byte[] transform(
             ClassLoader classLoader, String className,

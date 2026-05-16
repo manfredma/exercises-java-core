@@ -5,8 +5,6 @@ import com.github.fge.jackson.JsonLoader;
 import com.github.fge.jsonschema.core.report.ProcessingMessage;
 import com.github.fge.jsonschema.core.report.ProcessingReport;
 import com.github.fge.jsonschema.main.JsonSchemaFactory;
-import org.junit.Test;
-
 import java.io.IOException;
 import java.util.Iterator;
 
@@ -18,7 +16,10 @@ import java.util.Iterator;
  * ({@code ProcessingReport})，掌握 JSON Schema 校验失败信息的解析方式。
  */
 public class JacksonSchemaMain {
-    @Test
+    public static void main(String[] args) throws Exception {
+        new JacksonSchemaMain().testJsonSchema2();
+    }
+
     public void testJsonSchema2() {
         String failure = "{\"foo\":1234}";
         String Schema = "{\"type\": \"object\", \"properties\" : {\"foo\" : {\"type\" : " +

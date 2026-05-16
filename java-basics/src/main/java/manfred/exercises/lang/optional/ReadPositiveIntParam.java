@@ -1,11 +1,8 @@
 package manfred.exercises.lang.optional;
 
-import org.junit.*;
-
 import java.util.*;
 
 import static java.util.Optional.*;
-import static org.junit.Assert.assertEquals;
 
 /**
  * 对比命令式与 Optional 函数式两种方式读取正整数属性值。
@@ -16,22 +13,25 @@ import static org.junit.Assert.assertEquals;
  */
 public class ReadPositiveIntParam {
 
-    @Test
+    public static void main(String[] args) throws Exception {
+        new ReadPositiveIntParam().testMap();
+    }
+
     public void testMap() {
         Properties props = new Properties();
         props.setProperty("a", "5");
         props.setProperty("b", "true");
         props.setProperty("c", "-3");
 
-        assertEquals(5, readDurationImperative(props, "a"));
-        assertEquals(0, readDurationImperative(props, "b"));
-        assertEquals(0, readDurationImperative(props, "c"));
-        assertEquals(0, readDurationImperative(props, "d"));
+        System.out.println("imperative a: " + readDurationImperative(props, "a") + ", expected: 5");
+        System.out.println("imperative b: " + readDurationImperative(props, "b") + ", expected: 0");
+        System.out.println("imperative c: " + readDurationImperative(props, "c") + ", expected: 0");
+        System.out.println("imperative d: " + readDurationImperative(props, "d") + ", expected: 0");
 
-        assertEquals(5, readDurationWithOptional(props, "a"));
-        assertEquals(0, readDurationWithOptional(props, "b"));
-        assertEquals(0, readDurationWithOptional(props, "c"));
-        assertEquals(0, readDurationWithOptional(props, "d"));
+        System.out.println("optional a: " + readDurationWithOptional(props, "a") + ", expected: 5");
+        System.out.println("optional b: " + readDurationWithOptional(props, "b") + ", expected: 0");
+        System.out.println("optional c: " + readDurationWithOptional(props, "c") + ", expected: 0");
+        System.out.println("optional d: " + readDurationWithOptional(props, "d") + ", expected: 0");
     }
 
     public static int readDurationImperative(Properties props, String name) {

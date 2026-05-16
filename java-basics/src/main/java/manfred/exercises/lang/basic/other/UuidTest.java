@@ -1,7 +1,5 @@
 package manfred.exercises.lang.basic.other;
 
-import org.junit.Test;
-
 import java.util.UUID;
 
 /**
@@ -9,7 +7,10 @@ import java.util.UUID;
  */
 public class UuidTest {
 
-    @Test
+    public static void main(String[] args) throws Exception {
+        new UuidTest().testCreate();
+    }
+
     public void testCreate() {
         System.out.println(createGUID());
         System.out.println(createGUID());

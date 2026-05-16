@@ -1,7 +1,6 @@
 package manfred.exercises.serialization.protobuf.v1;
 
 import com.google.protobuf.InvalidProtocolBufferException;
-import org.junit.Test;
 /**
  * 演示 Protocol Buffers v1 版本中 Person 消息的序列化与反序列化完整流程。
  *
@@ -11,7 +10,10 @@ import org.junit.Test;
  * 二进制格式的紧凑性。
  */
 public class ProtobufTest {
-    @Test
+    public static void main(String[] args) throws Exception {
+        new ProtobufTest().testN();
+    }
+
     public void testN() throws InvalidProtocolBufferException {
         PersonModel.Person.Builder builder = PersonModel.Person.newBuilder();
         builder.setId(1);

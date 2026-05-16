@@ -1,7 +1,5 @@
 package manfred.exercises.jvm.invoke.method;
 
-import org.junit.Test;
-
 /**
  * 演示 JVM 静态分派（Static Dispatch）机制，即方法重载的解析规则。
  *
@@ -22,7 +20,10 @@ public class StaticDispatch {
 
     }
 
-    @Test
+    public static void main(String[] args) throws Exception {
+        new StaticDispatch().test();
+    }
+
     public void test() {
         Human man = new Man();
         Human woman = new Woman();

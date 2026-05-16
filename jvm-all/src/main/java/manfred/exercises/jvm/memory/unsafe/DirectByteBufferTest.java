@@ -1,7 +1,5 @@
 package manfred.exercises.jvm.memory.unsafe;
 
-import org.junit.Test;
-
 import java.nio.ByteBuffer;
 
 /**
@@ -9,7 +7,14 @@ import java.nio.ByteBuffer;
  */
 public class DirectByteBufferTest {
 
-    @Test
+    public static void main(String[] args) throws Exception {
+        DirectByteBufferTest t = new DirectByteBufferTest();
+        t.testProperties();
+        t.testWriteRead();
+        t.testReadToArray();
+        t.testCompact();
+    }
+
     public void testProperties() {
         ByteBuffer buffer = ByteBuffer.allocateDirect(1024);
         buffer.putChar('a');
@@ -30,7 +35,6 @@ public class DirectByteBufferTest {
         System.out.println("getChar(2) = " + buffer.getChar() + "; " + buffer);
     }
 
-    @Test
     public void testWriteRead() {
         ByteBuffer buffer = ByteBuffer.allocateDirect(10);
         System.out.println("初始化后 " + buffer);
@@ -44,7 +48,6 @@ public class DirectByteBufferTest {
         System.out.println("写string后 " + buffer);
     }
 
-    @Test
     public void testReadToArray() {
         ByteBuffer buffer = ByteBuffer.allocateDirect(10);
         buffer.put(new byte[]{1, 2, 3, 4});
@@ -60,7 +63,6 @@ public class DirectByteBufferTest {
         System.out.println("读取完数组 " + buffer);
     }
 
-    @Test
     public void testCompact() {
         ByteBuffer buffer = ByteBuffer.allocateDirect(10);
         buffer.put(new byte[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});

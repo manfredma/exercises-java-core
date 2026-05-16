@@ -1,7 +1,5 @@
 package manfred.exercises.lang.basic.stream;
 
-import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
@@ -16,7 +14,14 @@ import java.util.stream.Collectors;
  * NullPointerException 的行为验证。
  */
 public class StreamBasicDemo {
-    @Test
+
+    public static void main(String[] args) throws Exception {
+        StreamBasicDemo demo = new StreamBasicDemo();
+        demo.mergeMapValuesTest();
+        demo.testException();
+        demo.testException2();
+    }
+
     public void mergeMapValuesTest() {
         List<List<String>> xx = new ArrayList<>();
         List<String> xx1 = new ArrayList<>();
@@ -28,7 +33,6 @@ public class StreamBasicDemo {
         System.out.println(xxS);
     }
 
-    @Test
     public void testException() {
         A a1 = new A();
         A a2 = new A();
@@ -43,7 +47,6 @@ public class StreamBasicDemo {
                 .collect(Collectors.toList());
     }
 
-    @Test
     public void testException2() {
         A a1 = new A();
         a1.x1 = 3;

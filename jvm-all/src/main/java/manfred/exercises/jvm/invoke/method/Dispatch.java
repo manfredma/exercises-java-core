@@ -1,6 +1,5 @@
 package manfred.exercises.jvm.invoke.method;
 
-import org.junit.Test;
 /**
  * 演示 JVM 方法分派中静态分派与动态分派共同作用的典型场景。
  *
@@ -32,7 +31,10 @@ public class Dispatch {
             System.out.println("son choose 360");
         }
     }
-    @Test
+    public static void main(String[] args) throws Exception {
+        new Dispatch().test();
+    }
+
     public void test(){
         Father father = new Father();
         Father son = new Son();

@@ -1,7 +1,5 @@
 package manfred.exercises.lang.basic.other;
 
-import org.junit.Test;
-
 import java.util.Locale;
 
 /**
@@ -9,7 +7,10 @@ import java.util.Locale;
  */
 
 public class LocaleTest {
-    @Test
+    public static void main(String[] args) throws Exception {
+        new LocaleTest().testIndonesia();
+    }
+
     public void testIndonesia() {
 
         String s = "id_ID";

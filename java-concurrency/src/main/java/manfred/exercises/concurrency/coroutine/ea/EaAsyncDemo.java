@@ -14,7 +14,7 @@ import static com.ea.async.Async.await;
  * 以及直接调用 CompletableFuture.get() 阻塞等待（testAsyncV2），
  * 体现协程风格异步编程对代码可读性的提升。
  */
-public class TestEaAsync {
+public class EaAsyncDemo {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         System.out.println(LocalDateTime.now() + " begin ====================================");

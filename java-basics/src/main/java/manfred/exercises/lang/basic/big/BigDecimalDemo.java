@@ -10,7 +10,7 @@ import java.math.RoundingMode;
  * 以及 BigDecimal("0.00") 与 BigDecimal("0") 在 scale 上的差异，
  * 帮助理解金融场景下精确数值计算的正确姿势。
  */
-public class BigDecimalTests {
+public class BigDecimalDemo {
     public static void main(String[] args) {
         BigDecimal x = new BigDecimal(2).setScale(10, RoundingMode.DOWN);
         BigDecimal y = new BigDecimal("2.33333").setScale(11, RoundingMode.DOWN);

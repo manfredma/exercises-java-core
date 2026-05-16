@@ -9,7 +9,7 @@ import com.google.protobuf.InvalidProtocolBufferException;
  * 方法封装 Protobuf 的二进制序列化接口，并通过 {@code equals} 断言验证
  * 编解码前后对象的一致性，体会 Protobuf 对复杂结构消息的高效处理能力。
  */
-public class TestSubscribeReqProto {
+public class ProtobufSubscribeDemo {
     private static byte[] encode(SubscribeReqProto.SubscribeReq req) {
         return req.toByteArray();
     }

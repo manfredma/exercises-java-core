@@ -10,7 +10,7 @@ import java.io.IOException;
  * 编码为字节数组，再从字节数组还原为等价对象，验证序列化前后字段值的一致性，
  * 掌握 MessagePack 对 Java Bean 的自动字段映射机制。
  */
-public class TestUserInfo {
+public class MessagePackUserDemo {
     public static void main(String[] args) throws IOException {
         UserInfo userInfo = new UserInfo();
         userInfo.buildUserId(100).buildUserName("manfred");
